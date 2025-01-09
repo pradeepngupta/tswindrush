@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next JS Boilerplate code with TypeScript, Tailwind CSS, ESLint, Prettier, Jest, Enzyme, and Playwright
+
+Next JS is the Powerful React Framework for building Web Applications.
+Together with TypeScript, it provides a great developer experience and a scalable architecture.
+And with Tailwind CSS, you can create beautiful and responsive web applications.
+
+Integrating with ESLint and Prettier makes the code more readable.
+And with Jest and Enzyme, you can write and run tests.
+And Playwright for End-to-End testing.
+
+## Prerequisites
+
+Before you start using Next JS, make sure you have the following prerequisites:
+
+- Node.js and npm installed on your system.
+- Basic knowledge of React and JavaScript.
+- Basic understanding of HTML, CSS, and JavaScript.
+- Basic understanding of TypeScript.
+- Basic understanding of Tailwind CSS.
+
+## Features
+
+Next JS provides the following features:
+    - Server-side Rendering (SSR)
+    - Static File Serving
+    - Automatic Code Splitting
+    - Hot Module Reloading (HMR)
+    - TypeScript Support
+    - Built-in CSS Support
+    - Built-in Image Optimization
+    - Built-in Internationalization (i18n) Support
+    - Built-in Routing
+    - Built-in API Support
+    - Built-in Data Fetching
+    - Built-in Styling Support (Tailwind CSS)
+    - Built-in Testing Support (Jest, Enzyme)
+    - Built-in Code Linting Support (ESLint, Prettier)
+    - Built-in Bundling and Minification Support (Webpack)
+    - Built-in Deployment Support (Vercel, Netlify)
 
 ## Getting Started
 
-First, run the development server:
+See [Next JS Documentation](NextJS_Default.md) to get started with Next JS.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Conclusion
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+In this article, we have learned about Next JS, its features, and how to get started with it.
+Next JS is a powerful React Framework that provides a great developer experience and a scalable architecture.
+With Tailwind CSS, you can create beautiful and responsive web applications.
