@@ -70,5 +70,18 @@ This particular got deployed to vercel and here is the [Deployed Site](https://n
 
 Learn more about [Next.js on Vercel](https://vercel.com/docs/frameworks/nextjs?utm_source=next-site&utm_medium=docs&utm_campaign=next-website) or [deploy a template for free](https://vercel.com/templates/next.js?utm_source=next-site&utm_medium=docs&utm_campaign=next-website) to try it out.
 
-
 ## Deployment Static Export
+
+### Deployment to GitHub Pages
+
+Steps:
+
+1. Enable Pages in Github Repository to use Github Actions (Settings / Pages)
+2. Add the Workflow to deploy in .github/workflows
+3. Create Fine Grained Personal Access Token in the Account to give the "Pages" repository permission (read / write) + "Administration" repository permissions (read / write) - copy the token
+4. Add Secret in the repository with the name "PAGES_TOKEN" and the value as the token obtained above.
+5. Run the Workflow
+
+Go to Settings / Pages, you will see
+
+Your site is live at [https://pradeepngupta.github.io/nextjs-typescript-tailwindcss/](https://pradeepngupta.github.io/nextjs-typescript-tailwindcss/)
