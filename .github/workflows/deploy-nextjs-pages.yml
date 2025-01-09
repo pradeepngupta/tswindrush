@@ -61,7 +61,7 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
-          token: PAGES_TOKEN
+          token: ${{ secrets.PAGES_TOKEN }}
       - name: Restore cache
         uses: actions/cache@v4
         with:
