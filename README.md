@@ -42,8 +42,16 @@ Next JS provides the following features:
 
 See [Next JS Documentation](NextJS_Default.md) to get started with Next JS.
 
+## Deployment
+
+See [Deployment](./DEPLOYMENT.md) to learn the deployments of this project.
+
+## Learn More
+
+Learn about various other [integrations](./INTEGRATION.md) which we have not done in this project.
+
 ## Conclusion
 
-In this article, we have learned about Next JS, its features, and how to get started with it.
+In this project, we have learned about Next JS, its features, and how to get started with it.
 Next JS is a powerful React Framework that provides a great developer experience and a scalable architecture.
 With Tailwind CSS, you can create beautiful and responsive web applications.
