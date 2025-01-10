@@ -19,11 +19,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
    npm run dev
    ```
 
-6. The above command runs the app in the development mode.
-   Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+6. The above command runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+The page will reload if you make edits. You will also see any lint errors in the console.
 
 ## Get Started from Scratch
 
@@ -87,16 +85,13 @@ In the project directory, you can run:
 
 ### `npm run dev` or `yarn dev`
 
-Runs the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+The page will reload if you make edits. You will also see any lint errors in the console.
 
 ### `npm run build` or `yarn build`
 
-Builds the app for production to the `build` folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
 
 ### `npm run start` or `yarn start`
 
