@@ -17,11 +17,11 @@ This replaces Babel for individual files and Terser for minifying output bundles
 
 ## Babel vs NextJS Compiler
 
-| Babel | NextJS Compiler |
-| --- | --- |
-| Babel is a generic JavaScript transpiler that can be used in any javascript project<br />to convert newer JavaScript syntax into older browser-compatible code | The Next.js Compiler is specifically designed to optimize JavaScript compilation within the Next.js framework,<br />including features like server-side rendering and code splitting. |
-| Babel is slower than NextJS Compiler | Next.js now uses Rust-based compiler[SWC](https://swc.rs/) to compile JavaScript/TypeScript. <br />This new compiler is up to 17x faster than Babel when compiling individual files and up to 5x faster Fast Refresh. |
-| With Babel, you have a high degree of customization through plugins<br />and presets to tailor the compilation process to your specific needs | The Next.js Compiler prioritizes Next.js specific optimizations and<br />may offer less flexibility for fine-grained configuration |
+| Babel                                                                                                                                                          | NextJS Compiler                                                                                                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Babel is a generic JavaScript transpiler that can be used in any javascript project<br />to convert newer JavaScript syntax into older browser-compatible code | The Next.js Compiler is specifically designed to optimize JavaScript compilation within the Next.js framework,<br />including features like server-side rendering and code splitting.                              |
+| Babel is slower than NextJS Compiler                                                                                                                           | Next.js now uses Rust-based compiler[SWC](https://swc.rs/) to compile JavaScript/TypeScript. <br />This new compiler is up to 17x faster than Babel when compiling individual files and up to 5x faster Fast Refresh. |
+| With Babel, you have a high degree of customization through plugins<br />and presets to tailor the compilation process to your specific needs                  | The Next.js Compiler prioritizes Next.js specific optimizations and<br />may offer less flexibility for fine-grained configuration                                                                                 |
 
 Next.js provides full backwards compatibility with applications that have [custom Babel configuration](https://nextjs.org/docs/pages/building-your-application/configuring/babel).
 
@@ -52,3 +52,14 @@ npx mrm
 # Git Hooks via Husky
 
 Husky stands as a versatile library that facilitates the execution of designated scripts before pivotal Git events like git commit or git push occur. This sophisticated tool essentially acts as a conductor, guiding the flow of actions within Git, and empowers developers to assert greater control over the development process. Husky operates by implementing hooks, strategically positioned amidst Git events, enabling meticulous orchestration of workflows. This paradigm of controlled event interception is commonly referred to as git hook management.
+
+
+### Lint-Staged
+
+Run linters against staged git files and don't let 💩 slip into your code base!
+
+Linting makes more sense when run before committing your code. By doing so you can ensure no errors go into the repository and enforce code style. 
+
+But running a lint process on a whole project is slow, and linting results can be irrelevant. Ultimately you only want to lint files that will be committed.
+
+This project contains a script that will run arbitrary shell tasks with a list of staged files as an argument, filtered by a specified glob pattern.
