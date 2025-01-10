@@ -13,8 +13,8 @@ The output of this command:
 
 ```bash
 build
-next build   
-▲ Next.js 15.1.4 
+next build
+▲ Next.js 15.1.4
  ✓ Linting and checking validity of types
    Creating an optimized production build ...
  ✓ Compiled successfully
@@ -35,26 +35,26 @@ First Load JS shared by all             91.6 kB
 └ other shared chunks (total)           2.24 kB
 ```
 
-* The build output generated is in .next folder.
-* The build output is an optimized version of our application for production
-* HTML, CSS, and JavaScript files are created based on our pages.
-* JavaScript is **compiled** and browser bundles are **minified** using the [Next.js Compiler](https://nextjs.org/docs/architecture/nextjs-compiler) to help achieve the best performance and support [all modern browsers](https://nextjs.org/docs/architecture/supported-browsers).
+- The build output generated is in .next folder.
+- The build output is an optimized version of our application for production
+- HTML, CSS, and JavaScript files are created based on our pages.
+- JavaScript is **compiled** and browser bundles are **minified** using the [Next.js Compiler](https://nextjs.org/docs/architecture/nextjs-compiler) to help achieve the best performance and support [all modern browsers](https://nextjs.org/docs/architecture/supported-browsers).
 
 `next build` generates an optimized version of our application for production. This standard output includes:
 
-* HTML files for pages using `getStaticProps` or [Automatic Static Optimization](https://nextjs.org/docs/13/pages/building-your-application/rendering/automatic-static-optimization)
-* CSS files for global styles or for individually scoped styles
-* JavaScript for pre-rendering dynamic content from the Next.js server
-* JavaScript for interactivity on the client-side through React
+- HTML files for pages using `getStaticProps` or [Automatic Static Optimization](https://nextjs.org/docs/13/pages/building-your-application/rendering/automatic-static-optimization)
+- CSS files for global styles or for individually scoped styles
+- JavaScript for pre-rendering dynamic content from the Next.js server
+- JavaScript for interactivity on the client-side through React
 
 This output is generated inside the `.next` folder:
 
-* `.next/static/chunks/pages` – Each JavaScript file inside this folder relates to the route with the same name. For example, `.next/static/chunks/pages/about.js` would be the JavaScript file loaded when viewing the `/about` route in your application
-* `.next/static/media` – Statically imported images from `next/image` are hashed and copied here
-* `.next/static/css` – Global CSS files for all pages in your application
-* `.next/server/pages` – The HTML and JavaScript entry points prerendered from the server. The `.nft.json` files are created when [Output File Tracing](https://nextjs.org/docs/13/pages/api-reference/next-config-js/output) is enabled and contain all the file paths that depend on a given page.
-* `.next/server/chunks` – Shared JavaScript chunks used in multiple places throughout your application
-* `.next/cache` – Output for the build cache and cached images, responses, and pages from the Next.js server. Using a cache helps decrease build times and improve performance of loading images
+- `.next/static/chunks/pages` – Each JavaScript file inside this folder relates to the route with the same name. For example, `.next/static/chunks/pages/about.js` would be the JavaScript file loaded when viewing the `/about` route in your application
+- `.next/static/media` – Statically imported images from `next/image` are hashed and copied here
+- `.next/static/css` – Global CSS files for all pages in your application
+- `.next/server/pages` – The HTML and JavaScript entry points prerendered from the server. The `.nft.json` files are created when [Output File Tracing](https://nextjs.org/docs/13/pages/api-reference/next-config-js/output) is enabled and contain all the file paths that depend on a given page.
+- `.next/server/chunks` – Shared JavaScript chunks used in multiple places throughout your application
+- `.next/cache` – Output for the build cache and cached images, responses, and pages from the Next.js server. Using a cache helps decrease build times and improve performance of loading images
 
 All JavaScript code inside `.next` has been **compiled** and browser bundles have been **minified** to help achieve the best performance and support [all modern browsers](https://nextjs.org/docs/13/architecture/supported-browsers).
 

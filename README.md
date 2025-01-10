@@ -15,7 +15,7 @@
 
 ## Overview
 
-This repository provides a robust boilerplate for building web applications using Next.js, TypeScript, and Tailwind CSS. 
+This repository provides a robust boilerplate for building web applications using Next.js, TypeScript, and Tailwind CSS.
 It includes configurations for ESLint, Prettier, Jest, Enzyme, and Playwright to ensure code quality and testing.
 
 Next JS is the Powerful React Framework for building Web Applications.
