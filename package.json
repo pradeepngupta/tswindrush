@@ -1,6 +1,7 @@
 {
   "name": "nextjs-typescript-tailwindcss",
   "private": true,
+  "homepage": "https://pradeepngupta.github.io/nextjs-typescript-tailwindcss/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -8,7 +9,9 @@
     "lint": "next lint",
     "format": "prettier --check . --config ./.prettierrc",
     "format:fix": "prettier --write . --config ./.prettierrc",
-    "prepare": "husky"
+    "prepare": "husky && husky install",
+    "pretest": "npm run lint && tsc --noEmit",
+    "posttest": "npm run format"
   },
   "dependencies": {
     "next": "15.1.4",
@@ -26,5 +29,13 @@
     "eslint-plugin-prettier": "5.2.1",
     "husky": "9.1.7",
     "prettier": "3.4.2"
-  }
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "lint-staged": {
+    "*.ts|*.tsx|*.js|*.jsx": "npm run lint",
+    "*": "npm run format:fix"
+  },
+  "license": "MIT"
 }

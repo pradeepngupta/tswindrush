@@ -15,16 +15,11 @@
 
 ## Overview
 
-This repository provides a robust boilerplate for building web applications using Next.js, TypeScript, and Tailwind CSS.
-It includes configurations for ESLint, Prettier, Jest, Enzyme, and Playwright to ensure code quality and testing.
+This repository provides a robust boilerplate for building web applications using Next.js, TypeScript, and Tailwind CSS. It includes configurations for ESLint, Prettier, Jest, Enzyme, and Playwright to ensure code quality and testing.
 
-Next JS is the Powerful React Framework for building Web Applications.
-Together with TypeScript, it provides a great developer experience and a scalable architecture.
-And with Tailwind CSS, you can create beautiful and responsive web applications.
+Next JS is the Powerful React Framework for building Web Applications. Together with TypeScript, it provides a great developer experience and a scalable architecture. And with Tailwind CSS, you can create beautiful and responsive web applications.
 
-Integrating with ESLint and Prettier makes the code more readable.
-And with Jest and Enzyme, you can write and run tests.
-And Playwright for End-to-End testing.
+Integrating with ESLint and Prettier makes the code more readable. And with Jest and Enzyme, you can write and run tests. And Playwright for End-to-End testing.
 
 Read more [here](TechStack.md) on Why I choose the above Tech Stack
 
@@ -64,12 +59,10 @@ Learn about various other [integrations](./INTEGRATION.md) which we have not don
 
 ## Contributing
 
-## Contributing
-
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or suggestions.
 
-## License
+Learn more [here](./Contributing.md)
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](./License.md) file for more details.

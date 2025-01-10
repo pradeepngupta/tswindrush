@@ -35,3 +35,13 @@ yarn-error.log*
 
 #environment
 .env*
+node_modules/
+Thumbs.db
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.log
+yarn.lock
+pnpm-lock.yaml
+.eslintcache
