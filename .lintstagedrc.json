@@ -1,5 +1,0 @@
-{
-  "*.{ts,tsx}": "npx tsc --noEmit",
-  "*.{js,jsx,ts,tsx}": "next lint --fix",
-  "*": "npm run format:fix"
-}
