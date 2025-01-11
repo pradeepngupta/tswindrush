@@ -1,7 +1,11 @@
 {
   "name": "nextjs-typescript-tailwindcss",
-  "private": true,
   "homepage": "https://pradeepngupta.github.io/nextjs-typescript-tailwindcss/",
+  "author": "Pradeep Gupta <pradeepngupta@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pradeepngupta/nextjs-typescript-tailwindcss.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
