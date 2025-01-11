@@ -49,6 +49,41 @@ npm install -g mrm
 npx mrm
 ```
 
+# GitHub Dependabot
+
+Dependabot is a free GitHub feature that automatically updates your dependencies.
+
+Dependabot will scan your GitHub repository and submit PRs to update your dependencies (for example by updating your `composer.json` or `package.json`) files.
+
+When this is set up, Dependabot will automatically analyze your repository in every X period of time you configured (daily, weekly, or monthly) and submit a PR if a dependency can be updated.
+
+To enable it, create a `.github` folder at the root of your project directory. And Create a file named `dependabot.yml` inside this folder and paste this content into it:
+
+```
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: 'npm'
+    # Look for `package.json` and `lock` files in the `root` directory
+    directory: '/'
+    # Check the npm registry for updates every day (weekdays)
+    schedule:
+      interval: 'daily'
+
+  # Enable version updates for GitHub Actions
+  - package-ecosystem: 'github-actions'
+    # Workflow files stored in the default location of `.github/workflows`
+    # You don't need to specify `/.github/workflows` for `directory`. You can use `directory: "/"`.
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+```
+
 # Git Hooks via Husky
 
 Husky stands as a versatile library that facilitates the execution of designated scripts before pivotal Git events like git commit or git push occur. This sophisticated tool essentially acts as a conductor, guiding the flow of actions within Git, and empowers developers to assert greater control over the development process. Husky operates by implementing hooks, strategically positioned amidst Git events, enabling meticulous orchestration of workflows. This paradigm of controlled event interception is commonly referred to as git hook management.
@@ -124,7 +159,7 @@ Pattern:  - 0 matches
 
 Since we have not written any tests, it says no tests found.
 
-> Notice the `testMatch `& `testPathIgnorePatterns`, If you want to modify, you can modify them in` jest.config.js`
+> Notice the `testMatch `& `testPathIgnorePatterns`, If you want to modify, you can modify them in ` jest.config.js`
 
 ### React-Testing-Library
 
