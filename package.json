@@ -10,7 +10,7 @@
     "lint": "next lint --fix",
     "format": "prettier --check . --config ./.prettierrc",
     "format:fix": "prettier --write . --config ./.prettierrc",
-    "prepare": "husky && husky init",
+    "prepare": "husky",
     "pretest": "npm run lint && tsc --noEmit",
     "posttest": "npm run format",
     "test:jest": "jest",
