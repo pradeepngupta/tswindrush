@@ -9,9 +9,13 @@
     "lint": "next lint",
     "format": "prettier --check . --config ./.prettierrc",
     "format:fix": "prettier --write . --config ./.prettierrc",
-    "prepare": "husky && husky install",
+    "prepare": "husky && husky init",
     "pretest": "npm run lint && tsc --noEmit",
-    "posttest": "npm run format"
+    "posttest": "npm run format",
+    "test:jest": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test": "npm run test:jest --"
   },
   "dependencies": {
     "next": "15.1.4",
@@ -19,6 +23,11 @@
     "react-dom": "19.0.0"
   },
   "devDependencies": {
+    "@testing-library/dom": "10.4.0",
+    "@testing-library/jest-dom": "6.6.3",
+    "@testing-library/react": "16.1.0",
+    "@testing-library/user-event": "14.5.2",
+    "@types/jest": "29.5.14",
     "@types/lint-staged": "13.3.0",
     "@types/node": "22.10.5",
     "@types/react": "19.0.4",
@@ -29,8 +38,12 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "5.2.1",
     "husky": "9.1.7",
+    "jest": "29.7.0",
+    "jest-environment-jsdom": "29.7.0",
     "lint-staged": "15.3.0",
-    "prettier": "3.4.2"
+    "prettier": "3.4.2",
+    "ts-jest": "29.2.5",
+    "ts-node": "10.9.2"
   },
   "engines": {
     "node": ">=16"
