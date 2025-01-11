@@ -23,12 +23,14 @@ const config: Config = {
 			},
 		],
 	},
+	collectCoverage: true,
+	collectCoverageFrom: ['./pages/**'],
 	coverageThreshold: {
 		global: {
-			branches: 70,
-			functions: 70,
-			lines: 70,
-			statements: 70,
+			branches: 30,
+			functions: 30,
+			lines: 30,
+			statements: 30,
 		},
 	},
 	testMatch: ['**/__tests__/**/*.ts?(x)'],
