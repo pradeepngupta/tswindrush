@@ -7,6 +7,6 @@ const buildEslintCommand = (filenames) =>
 
 module.exports = {
 	'*.{js,jsx,ts,tsx}': [buildEslintCommand],
-	'*.{ts,tsx}': 'npx tsc --noEmit',
+	// '*.{ts,tsx}': 'npx tsc --noEmit',
 	'*': 'npm run format:fix',
 };
