@@ -200,6 +200,10 @@ This library encourages your applications to be more accessible and allows you t
 
 > This library is a replacement for [Enzyme](http://airbnb.io/enzyme/).
 
+## CodeCov
+
+[![Codecov](https://codecov.io/gh/pradeepngupta/nextjs-typescript-tailwindcss/graph/badge.svg)](https://codecov.io/gh/pradeepngupta/nextjs-typescript-tailwindcss)
+
 ## Playwright
 
 Storybook
