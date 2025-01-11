@@ -20,7 +20,10 @@
     "test:jest": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "test": "npm run test:jest --"
+    "test": "npm run test:jest --",
+    "test:e2e": "npx playwright test",
+    "test:e2e-ui": "npx playwright test --ui",
+    "test:e2e-debug": "npx playwright test --debug"
   },
   "dependencies": {
     "next": "15.1.4",
@@ -28,6 +31,7 @@
     "react-dom": "19.0.0"
   },
   "devDependencies": {
+    "@playwright/test": "1.49.1",
     "@swc/jest": "0.2.37",
     "@testing-library/dom": "10.4.0",
     "@testing-library/jest-dom": "6.6.3",

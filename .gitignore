@@ -63,3 +63,7 @@ tsconfig.tsbuildinfo
 **/.history
 
 # End of https://www.gitignore.io/api/visualstudiocode
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
