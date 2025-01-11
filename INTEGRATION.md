@@ -168,3 +168,51 @@ Install required libraries for RTL to work with Typescript:
 ```
 npm install --save-dev @testing-library/react @testing-library/dom @types/react @types/react-dom
 ```
+
+### @swc/jest
+
+SWC is an extensible Rust-based platform for the next generation of fast developer tools
+
+Traditionally with TypeScript projects, the transformer to use for running Jest tests would either be `babel-jest` or `ts-jest`.
+
+These were fine but could sometimes suffer from a performance point-of-view.
+
+Given the SWC tools are written in Rust, they're rapid.
+
+```
+npm install @swc/core @swc/jest -D
+```
+
+Configure transform in` jest.config.ts`:
+
+```
+transform: { '.*\\.(tsx?)$': '@swc/jest' }
+```
+
+This tells Jest to run our tests through `@swc/jest`.
+
+For React,
+
+- Using React 19+ (with automatic JSX runtime). This means you are not importing React in each component
+- Using `jsdom` as Jest `testEnvironment`
+- Using React Testing Library
+
+As Jest (and @swc/jest) does not know about React because you are not importing it, we can tell `@swc/jest` about this. Let's tweak the `jest.config.js`.
+
+```javascript
+testEnvironment: 'jsdom',
+  transform: {
+    '.*\\.(tsx?)$': [
+      '@swc/jest',
+      {
+        jsc: {
+          transform: {
+            react: {
+              runtime: 'automatic',
+            },
+          },
+        },
+      },
+```
+
+This means we don't have to import React in our tests in order to run them.
