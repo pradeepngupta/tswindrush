@@ -141,10 +141,65 @@ Since everyone on the project is using the same set of pre-commit hooks, it ensu
 
 Husky seamlessly integrates with popular tools like ESLint, Prettier, and Jest, allowing you to leverage their functionality within your Git hooks.
 
-## Test cases
+## Testing
 
-Jest
+Testing is the most important in the software developement.
 
-Playwright
+TDD is the practice almost all developers are following.
+
+**What are the different type of Tests?**
+
+- **Unit Testing**
+  - Tests one unit of code at a time. May be a single function or a component without depending on other units
+- **Integration Testing**
+  - Tests how multiple units work together. Testing interaction between different functions/units/components
+- **Functional / Behavioural Testing**
+  - Functional testing means testing the behaviour of a function/software. We might be testing if the software does the right thing with the particular set of data. That might be an integration test as it might have to interact with different units. So the functional test can be an integration test as well
+  - The functional test can also be a simple unit test. Let's say on a button click, the div turns red. This might be a simple unit test but still it can also be considered as a functional test as it tests for a particular behaviour of CLICK TURNS RED OR NOT
+  - So, the functional test means, not testing the code but testing the behaviour. **React-Testing-Library** encourages functional tests
+- **Acceptance/End-to-End(E2E) test**
+  - This is an End-to-End testing where we need a browser and might also need the server
+  - Popular tools for E2E testing are **[Cypress](https://www.cypress.io/), [Selenium](https://www.selenium.dev/) and [Playwright](https://playwright.dev/)**
+    - Cypress supports only Javascript
+    - Selenium supports all popular languages like Java, Python, Ruby, C#, Php, etc.
+    - Playwright supports TypeScript, JavaScript, Python, .NET, and Java
+    - [Check - Cypress Vs Selenium Vs Playwright](https://www.lambdatest.com/blog/playwright-vs-selenium-vs-cypress/)
+  - **React-Testing-Library doesn't support E2E testing**
+
+## Jest
+
+Jest is a JavaScript testing framework designed to ensure correctness of any JavaScript codebase.
+
+It allows you to write tests with an approachable, familiar and feature-rich API that gives you results quickly.
+
+**Jest makes testing delightful.**
+
+**Jest is primarily considered a unit testing framework for Javascript projects.**
+
+Jest can also be used for Integration Testing and functional testing.
+
+In order to perform functional testing, React testing library needs to use to render React Components in virtual DOM.
+
+Some developers can use it to perform end-to-end (E2E) testing by integrating it with tools like Puppeteer.
+
+But I am restricting myself, atleast in this boilerplate code to use JEST for unit testing and Playwright for E2E Testing.
+
+### React Testing Library (RTL)
+
+The `React Testing Library` is a very light-weight solution for testing React components.
+
+It provides light utility functions on top of `react-dom` and `react-dom/test-utils`, in a way that encourages better testing practices.
+
+Its primary guiding principle is:
+
+> [The more your tests resemble the way your software is used, the more confidence they can give you.](https://testing-library.com/docs/guiding-principles)
+
+So rather than dealing with instances of rendered React components, your tests will work with actual DOM nodes.
+
+This library encourages your applications to be more accessible and allows you to get your tests closer to using your components the way a user will, which allows your tests to give you more confidence that your application will work when a real user uses it.
+
+> This library is a replacement for [Enzyme](http://airbnb.io/enzyme/).
+
+## Playwright
 
 Storybook
