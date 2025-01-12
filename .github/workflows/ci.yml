@@ -63,6 +63,9 @@ jobs:
           pwd
           ls -la ./.next
           ls -la .next
+          ls -la .ne*
+          chmod 755 -R .ne*
+          chmod 755 -R .next/
 
       - name: Cache Build Output
         uses: actions/cache@v4
