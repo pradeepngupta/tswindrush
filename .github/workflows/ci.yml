@@ -65,22 +65,27 @@ jobs:
             node_modules
           key: build-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifacts
+          path: .next
+
   jest-test:
     name: Run Jest Tests
     needs: build
     runs-on: ubuntu-24.04
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifacts
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: npm
-
-      - name: Install Dependencies
-        run: npm ci
 
       - name: Run Jest Tests
         run: npm run test:cov
@@ -97,17 +102,16 @@ jobs:
     needs: jest-test
     runs-on: ubuntu-24.04
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifacts
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: npm
-
-      - name: Install Dependencies
-        run: npm ci
 
       - name: Install Playwright and Browsers
         run: npx playwright install --with-deps
@@ -132,14 +136,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-24.04
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: npm
+          name: build-artifacts
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -150,28 +150,6 @@ jobs:
         # You may remove this line if you want to manage the configuration yourself.
         static_site_generator: next
         token: ${{ secrets.PAGES_TOKEN }}
-
-      - name: Restore cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            .next/cache
-          # Generate a new cache whenever packages or source files change.
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-          # If source files changed but packages didn't, rebuild from a prior cache.
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
-
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Build Application
-        run: npm run build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./out
 
       - name: Deploy to GitHub Pages
         id: deployment
