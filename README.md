@@ -19,9 +19,9 @@ This repository provides a robust boilerplate for building web applications usin
 
 Next JS is the Powerful React Framework for building Web Applications. Together with TypeScript, it provides a great developer experience and a scalable architecture. And with Tailwind CSS, you can create beautiful and responsive web applications.
 
-Integrating with ESLint and Prettier makes the code more readable. And with Jest and Enzyme, you can write and run tests. And Playwright for End-to-End testing.
+Integrating with ESLint and Prettier makes the code more readable. And with Jest and React Testing Library (RTL), you can write and run tests. And Playwright for End-to-End testing.
 
-Read more [here](TechStack.md) on Why I choose the above Tech Stack
+Read more [here](./docs/TechStack.md) on Why I choose the above Tech Stack
 
 ## Prerequisites
 
@@ -39,29 +39,27 @@ Before you start using Next JS, make sure you have the following prerequisites:
 - **TypeScript** for static typing
 - **Tailwind CSS** for utility-first styling
 - **ESLint** and **Prettier** for code linting and formatting
-- **Jest** and **Enzyme** for unit testing
+- **Jest** and **React Testing Library** for unit & Functional Testing
 - **Playwright** for end-to-end testing
 - Deployment configurations for **Vercel** and **GitHub Pages**
 
 ## Getting Started
 
-See [Next JS Documentation](NextJS_Default.md) to get started with Next JS.
+See [Next JS Documentation](./docs/NextJS_Default.md) to get started with Next JS.
 
 ## Deployment
 
-## Deployment
-
-This project is configured for deployment on Vercel and GitHub Pages. For detailed instructions, refer to the [DEPLOYMENT.md](./DEPLOYMENT.md) file.
+This project is configured for deployment on Vercel and GitHub Pages. For detailed instructions, refer to the [DEPLOYMENT.md](./docs/DEPLOYMENT.md) file.
 
 ## Learn More
 
-Learn about various other [integrations](./INTEGRATION.md) which we have not done in this project.
+Learn about various other [integrations](./docs/INTEGRATION.md) done in this project.
 
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or suggestions.
 
-Learn more [here](./Contributing.md)
+Learn more [here](./docs/Contributing.md)
 
 ## License
 
