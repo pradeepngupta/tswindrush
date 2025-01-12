@@ -58,11 +58,43 @@ Typesafety makes you faster. If you’re not convinced, you [might be using Type
 
 ### Tailwind CSS
 
+Tailwind CSS is a tiny, [utility first↗](https://tailwindcss.com/docs/utility-first) CSS framework for building custom designs, without the context switching that regular CSS requires. It is purely a CSS framework and does not provide any pre-built components or logic, and provides [a very different set of benefits↗](https://www.youtube.com/watch?v=CQuTF-bkOgc) compared to a component library like Material UI.
+
 Tailwind feels like “zen-mode CSS”.
 
 By providing building blocks in the form of good default colors, spacing, and other primitives, Tailwind makes it easy to create a good-looking app. And unlike component libraries, it does not hold you back when you want to take your app to the next level and create something beautiful and unique.
 
 Additionally, with its inline-like approach, Tailwind encourages you to style without worrying about naming classes, organizing files, or any other issue not directly tied to the problem you’re trying to solve.
+
+#### PostCSS & Auto-Prefixer
+
+When using **Tailwind CSS**, **PostCSS** acts as the core engine to process your styles, while **Autoprefixer**, a PostCSS plugin, automatically adds necessary vendor prefixes to your generated CSS, ensuring compatibility across different browsers without you needing to manually add them; essentially, Tailwind leverages PostCSS's flexibility to enhance its functionality and streamline the development process by handling browser compatibility through Autoprefixer.
+
+![PostCSS Scheme](./PostCSS_scheme.png)
+
+**PostCSS** is a tool for transforming styles with JS plugins. These plugins can lint your CSS, support variables and mixins, transpile future CSS syntax, inline images, and more.
+
+PostCSS is used by industry leaders including Wikipedia, Twitter, Alibaba, and JetBrains. The [Autoprefixer](https://github.com/postcss/autoprefixer) and [Stylelint](https://stylelint.io/) PostCSS plugins is one of the most popular CSS tools.
+
+PostCSS takes a CSS file and provides an API to analyze and modify its rules (by transforming them into an [Abstract Syntax Tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree)). This API can then be used by [plugins](https://github.com/postcss/postcss#plugins) to do a lot of useful things, e.g., to find errors automatically, or to insert vendor prefixes.
+
+**Autoprefixer**, (is a PostCSS Plugin) allows you to write your CSS rules without vendor prefixes (in fact, you can forget about them entirely).
+
+This PostCSS plugin for parsing CSS and adding vendor prefixes as needed is one of the most popular frontend build libraries. It’s been recommended by Google and is used by Twitter and Alibaba.
+
+Key points about using PostCSS and Autoprefixer with Tailwind:
+
+- **Tailwind as a PostCSS plugin:**
+
+  Tailwind CSS is designed to work as a plugin within the PostCSS ecosystem, allowing you to easily integrate it with other PostCSS features and plugins like Autoprefixer.
+
+- **Vendor prefixing:**
+
+  Since Tailwind itself doesn't automatically add vendor prefixes, using Autoprefixer ensures your generated styles work correctly across different browsers.
+
+- **Streamlined workflow:**
+
+  By combining Tailwind with PostCSS and Autoprefixer, you can write clean CSS without worrying about browser compatibility issues.
 
 ## Deployment & Hosting
 
@@ -206,4 +238,12 @@ This library encourages your applications to be more accessible and allows you t
 
 ## Playwright
 
-Storybook
+Playwright is an open-source automation framework for end-to-end testing. It supports most modern rendering browsers, including Firefox, Chromium, and Webkit. Playwright is created and maintained by Microsoft and has steadily been gaining in popularity.
+
+It is a Node library that automates the Chromium, WebKit, and Firefox browsers using a single API. It enables quick, efficient, competent, and reliable cross-browser c.
+
+Playwright test framework supports Jest, Mocha, Jasmine, and other prominent CI servers using a single API. Playwright offers cross-language support, which includes TypeScript, JavaScript, Python, .NET, and Java.
+
+![Playwright-Architecture](./playwright-architecture.png 'Playwright-Architecture')
+
+## Storybook

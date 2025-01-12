@@ -98,7 +98,9 @@ But running a lint process on a whole project is slow, and linting results can b
 
 This project contains a script that will run arbitrary shell tasks with a list of staged files as an argument, filtered by a specified glob pattern.
 
-# Jest
+# Testing Tools
+
+## Jest
 
 **Please do not use MRM task to integrate with JEST, MRM task is using Enzyme library which is now deprecated.**
 
@@ -183,7 +185,7 @@ Given the SWC tools are written in Rust, they're rapid.
 npm install @swc/core @swc/jest -D
 ```
 
-Configure transform in` jest.config.ts`:
+Configure transform in ` jest.config.ts`:
 
 ```
 transform: { '.*\\.(tsx?)$': '@swc/jest' }
@@ -216,3 +218,49 @@ testEnvironment: 'jsdom',
 ```
 
 This means we don't have to import React in our tests in order to run them.
+
+## Playwright
+
+Installed Playwright and Initialize
+
+```
+npm init playwright
+```
+
+> Following is the output
+
+```
+Need to install the following packages:
+create-playwright@1.17.134
+Ok to proceed? (y) ynpx
+create-playwrightGetting started with writing end-to-end tests with Playwright:
+Initializing project in '.'
+√ Where to put your end-to-end tests? · e2e
+√ Add a GitHub Actions workflow? (y/N) · true
+√ Install Playwright browsers (can be done manually via 'npx playwright install')? (Y/n) · true
+Installing Playwright Test (npm install --save-dev @playwright/test)…added 3 packages, and audited 695 packages in 6s182 packages are looking for funding
+  run npm fund for detailsfound 0 vulnerabilities
+Writing playwright.config.ts.
+Writing .github\workflows\playwright.yml.
+Writing e2e\example.spec.ts.
+Writing tests-examples\demo-todo-app.spec.ts.
+Writing package.json.
+Downloading browsers (npx playwright install)…
+✔ Success! Created a Playwright Test project at D:\Biz\BoilerplateCode\NextJS\nextjs-typescript-tailwindcssInside that directory, you can run several commands:  npx playwright test
+    Runs the end-to-end tests.  npx playwright test --ui
+    Starts the interactive UI mode.  npx playwright test --project=chromium
+    Runs the tests only on Desktop Chrome.  npx playwright test example
+    Runs the tests in a specific file.  npx playwright test --debug
+    Runs the tests in debug mode.  npx playwright codegen
+    Auto generate tests with Codegen.We suggest that you begin by typing:    npx playwright testAnd check out the following files:.\_e2e_\example.spec.ts - Example end-to-end test.\tests-examples\demo-todo-app.spec.ts - Demo Todo App end-to-end tests.\playwright.config.ts - Playwright Test configurationVisit https://playwright.dev/docs/intro for more information. ✨Happy hacking! 🎭
+```
+
+Add the following scripts in `package.json`
+
+```
+"test:e2e": "npx playwright test",
+"test:e2e-ui": "npx playwright test --ui",
+"test:e2e-debug": "npx playwright test --debug"
+```
+
+You can add more scripts as per your convenience.
