@@ -58,6 +58,9 @@ jobs:
       - name: Build Application
         run: npm run build
 
+      - name: Verify Build Output
+        run: ls -la .next
+
       - name: Cache Build Output
         uses: actions/cache@v4
         with:
@@ -70,7 +73,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build-artifacts
-          path: .out
+          path: .next
 
   jest-test:
     name: Run Jest Tests
