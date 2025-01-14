@@ -90,9 +90,13 @@ Before you start using Next JS, make sure you have the following prerequisites:
 
 ## 🚀 Live Demo
 
-This starter template is deployed on Vercel. Hee is the Demo: [TSWindRush Demo](./assets/ts-windrush.gif)
+This starter template is deployed on Vercel. Hee is the Demo: ![TSWindRush Demo](./assets/ts-windrush.gif)
 
-For Live Demo, Click below link to the deployed app [Vercel App](https://tsw-ind-rush-pradeepnguptas-projects.vercel.app/) [API Route - Hello](https://tsw-ind-rush-pradeepnguptas-projects.vercel.app/api/hello) [API Route - Version](https://tsw-ind-rush-pradeepnguptas-projects.vercel.app/api/version)
+For Live Demo, Click below link to the deployed app
+
+- [Vercel App](https://tsw-ind-rush-pradeepnguptas-projects.vercel.app/)
+- [API Route - Hello](https://tsw-ind-rush-pradeepnguptas-projects.vercel.app/api/hello)
+- [API Route - Version](https://tsw-ind-rush-pradeepnguptas-projects.vercel.app/api/version)
 
 This project is pre-configured with the deployment on Vercel. For detailed instructions, refer to the [DEPLOYMENT](./docs/DEPLOYMENT.md).
 
