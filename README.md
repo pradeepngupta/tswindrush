@@ -4,7 +4,7 @@ _"Kickstart your modern web development journey effortlessly!"_
 
 ![TSWindRush Stack](./assets/ts-windrush.svg)
 
-![Next.js](https://img.shields.io/badge/Next.js-v13.0-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-v4.0-blue) ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v3.0-green)
+![Next.js](https://img.shields.io/badge/Next.js-v15.1.4-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-v5.7.3-blue) ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v3.4.17-green)
 
 🚀 TSWindRush is a blazing-fast, developer-friendly starter template combining Next.js, TypeScript, and TailwindCSS for modern web development.
 
@@ -59,13 +59,11 @@ Before you start using Next JS, make sure you have the following prerequisites:
 
 ## 🚀 Live Demo
 
-This starter template is deployed on Vercel and on Github Pages (using Static Export)
+This starter template is deployed on Vercel
 
-[Vercel App](https://nextjs-typescript-tailwindcss-murex.vercel.app/)
+[Vercel App](https://tsw-ind-rush-pradeepnguptas-projects.vercel.app/)
 
-[Github Pages](https://pradeepngupta.github.io/nextjs-typescript-tailwindcss/)
-
-This project is pre-configured with the deployment on Vercel and Github pages. For detailed instructions, refer to the [DEPLOYMENT](./docs/DEPLOYMENT.md).
+This project is pre-configured with the deployment on Vercel. For detailed instructions, refer to the [DEPLOYMENT](./docs/DEPLOYMENT.md).
 
 ## 🛠️ Setup & Installation
 

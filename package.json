@@ -1,10 +1,10 @@
 {
-  "name": "nextjs-typescript-tailwindcss",
-  "homepage": "https://pradeepngupta.github.io/nextjs-typescript-tailwindcss/",
+  "name": "tswindrush",
+  "homepage": "https://tsw-ind-rush-pradeepnguptas-projects.vercel.app/",
   "author": "Pradeep Gupta <pradeepngupta@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pradeepngupta/nextjs-typescript-tailwindcss.git"
+    "url": "https://github.com/pradeepngupta/tswindrush.git"
   },
   "scripts": {
     "dev": "next dev",
@@ -56,7 +56,8 @@
     "prettier": "3.4.2",
     "tailwindcss": "3.4.17",
     "ts-jest": "29.2.5",
-    "ts-node": "10.9.2"
+    "ts-node": "10.9.2",
+    "typescript": "5.7.3"
   },
   "engines": {
     "node": ">=16"

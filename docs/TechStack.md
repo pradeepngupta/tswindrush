@@ -6,7 +6,6 @@
       - [PostCSS \& Auto-Prefixer](#postcss--auto-prefixer)
   - [Deployment \& Hosting](#deployment--hosting)
     - [Vercel](#vercel)
-    - [Github Pages](#github-pages)
   - [Continuous Integration / Continuous Deployment](#continuous-integration--continuous-deployment)
     - [Github Actions](#github-actions)
   - [Static Code Analysis](#static-code-analysis)
@@ -133,12 +132,6 @@ Key points about using PostCSS and Autoprefixer with Tailwind:
 While Next.js works when self-hosting, deploying to Vercel is zero-configuration and provides additional enhancements for **scalability, availability, and performance globally**.
 
 Vercel supports [popular frontend frameworks](https://vercel.com/docs/frameworks) out-of-the-box, and its scalable, secure infrastructure is globally distributed to serve content from data centers near your users for optimal speeds.
-
-### Github Pages
-
-GitHub Pages are public webpages hosted and published through GitHub.
-
-Github Pages are quick to showcase open source stativ web application.
 
 ## Continuous Integration / Continuous Deployment
 

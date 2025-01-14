@@ -18,27 +18,37 @@ Production Build can be get by running the command `npm run build`
 The output of this command:
 
 ```bash
-build
-next build
-▲ Next.js 15.1.4
- ✓ Linting and checking validity of types
+
+> build
+> next build
+
+   ▲ Next.js 15.1.4
+   - Environments: .env
+
    Creating an optimized production build ...
  ✓ Compiled successfully
+   Skipping linting
+ ✓ Checking validity of types
  ✓ Collecting page data
- ✓ Generating static pages (3/3)
+ ✓ Generating static pages (10/10)
  ✓ Collecting build traces
  ✓ Finalizing page optimization
 
- Route (pages)                          Size     First Load JS
-┌ ○ /                                     6.3 kB         97.7 kB
-├   └ css/f7bac67f9d9badbc.css            657 B
-├   /_app                                 0 B            91.4 kB
-├ ○ /404                                  2.42 kB        93.8 kB
-└ ƒ /api/hello                            0 B            91.4 kB
-First Load JS shared by all             91.6 kB
-├ chunks/framework-a4ddb9b21624b39b.js  57.5 kB
-├ chunks/main-4212ba9651e5cb31.js       31.9 kB
-└ other shared chunks (total)           2.24 kB
+Route (app)                              Size     First Load JS
+┌ ○ /                                    5.57 kB         111 kB
+├ ○ /_not-found                          979 B           106 kB
+├ ○ /apple-icon.png                      0 B                0 B
+├ ○ /icon.png                            0 B                0 B
+├ ○ /manifest.json                       0 B                0 B
+├ ○ /robots.txt                          0 B                0 B
+└ ○ /sitemap.xml                         0 B                0 B
++ First Load JS shared by all            105 kB
+  ├ chunks/4bd1b696-20882bf820444624.js  52.9 kB
+  ├ chunks/517-da775dc7c050d5b8.js       50.5 kB
+  └ other shared chunks (total)          1.95 kB
+
+
+○  (Static)  prerendered as static content
 ```
 
 - The build output generated is in .next folder.
@@ -80,6 +90,8 @@ Learn more about [Next.js on Vercel](https://vercel.com/docs/frameworks/nextjs?u
 
 ### Deployment to GitHub Pages
 
+GitHub Pages deployment is not done for this repository.
+
 Steps:
 
 1. Enable Pages in Github Repository to use Github Actions (Settings / Pages)
@@ -90,4 +102,4 @@ Steps:
 
 Go to Settings / Pages, you will see
 
-Your site is live at [https://pradeepngupta.github.io/nextjs-typescript-tailwindcss/](https://pradeepngupta.github.io/nextjs-typescript-tailwindcss/)
+Your site is live at URL
