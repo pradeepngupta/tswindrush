@@ -41,6 +41,10 @@ Next JS is the Powerful React Framework for building Web Applications. Together 
   - [Contributors 🌟](#contributors-)
   - [Join the Conversation 💬](#join-the-conversation-)
   - [🔗 Connect](#-connect)
+  - [🚀 Roadmap](#-roadmap)
+    - [Current Planned Features](#current-planned-features)
+    - [Proposed Features](#proposed-features)
+    - [Community Wishlist](#community-wishlist)
   - [Code of Conduct 🤝](#code-of-conduct-)
   - [📄 License](#-license)
 
@@ -86,9 +90,9 @@ Before you start using Next JS, make sure you have the following prerequisites:
 
 ## 🚀 Live Demo
 
-This starter template is deployed on Vercel
+This starter template is deployed on Vercel. Hee is the Demo: [TSWindRush Demo](./assets/ts-windrush.gif)
 
-[Vercel App](https://tsw-ind-rush-pradeepnguptas-projects.vercel.app/)
+For Live Demo, Click below link to the deployed app [Vercel App](https://tsw-ind-rush-pradeepnguptas-projects.vercel.app/) [API Route - Hello](https://tsw-ind-rush-pradeepnguptas-projects.vercel.app/api/hello) [API Route - Version](https://tsw-ind-rush-pradeepnguptas-projects.vercel.app/api/version)
 
 This project is pre-configured with the deployment on Vercel. For detailed instructions, refer to the [DEPLOYMENT](./docs/DEPLOYMENT.md).
 
