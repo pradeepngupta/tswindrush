@@ -1,3 +1,9 @@
+- [How to contribute](#how-to-contribute)
+  - [Prerequisites](#prerequisites)
+  - [Development workflow](#development-workflow)
+  - [Other notes](#other-notes)
+  - [Need help?](#need-help)
+
 # How to contribute
 
 We love pull requests. And following this guidelines will make your pull request easier to merge.

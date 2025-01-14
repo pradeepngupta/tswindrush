@@ -1,3 +1,9 @@
+- [Deploying Next JS Web Application](#deploying-next-js-web-application)
+  - [Production Build](#production-build)
+  - [Deployment with Managed Host (Vercel)](#deployment-with-managed-host-vercel)
+  - [Deployment Static Export](#deployment-static-export)
+    - [Deployment to GitHub Pages](#deployment-to-github-pages)
+
 # Deploying Next JS Web Application
 
 We can deploy the Next JS Web applicatioin either

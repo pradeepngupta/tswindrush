@@ -1,3 +1,15 @@
+- [Babel](#babel)
+  - [Babel vs NextJS Compiler](#babel-vs-nextjs-compiler)
+- [MRM](#mrm)
+- [GitHub Dependabot](#github-dependabot)
+- [Git Hooks via Husky](#git-hooks-via-husky)
+  - [Lint-Staged](#lint-staged)
+- [Testing Tools](#testing-tools)
+  - [Jest](#jest)
+    - [React-Testing-Library](#react-testing-library)
+    - [@swc/jest](#swcjest)
+  - [Playwright](#playwright)
+
 # Babel
 
 Babel is the **javascript compiler.**

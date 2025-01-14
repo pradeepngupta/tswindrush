@@ -1,3 +1,15 @@
+- [Getting Started](#getting-started)
+  - [Clone Repo \& run](#clone-repo--run)
+  - [Get Started from Scratch](#get-started-from-scratch)
+  - [Available Scripts](#available-scripts)
+    - [`npm run dev` or `yarn dev`](#npm-run-dev-or-yarn-dev)
+    - [`npm run build` or `yarn build`](#npm-run-build-or-yarn-build)
+    - [`npm run start` or `yarn start`](#npm-run-start-or-yarn-start)
+    - [`npm run lint` or `yarn lint`](#npm-run-lint-or-yarn-lint)
+  - [Using Typescript](#using-typescript)
+  - [Learn More](#learn-more)
+  - [Deploy on Vercel](#deploy-on-vercel)
+
 # Getting Started
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
