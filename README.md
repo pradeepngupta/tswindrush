@@ -4,7 +4,7 @@ _"Kickstart your modern web development journey effortlessly!"_
 
 ![TSWindRush Stack](./assets/ts-windrush.svg)
 
-![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=nextjs&label=Next.js) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=reactjs&label=React.js) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=typescript&label=TypeScript) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=tailwindCSS&label=Tailwind CSS)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=nextjs&label=Next.js) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=reactjs&label=React.js) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=typescript&label=TypeScript) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=tailwindCSS&label=TailwindCSS)
 
 ---
 
