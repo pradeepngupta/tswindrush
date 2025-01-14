@@ -77,7 +77,12 @@ Before you start using Next JS, make sure you have the following prerequisites:
 
 ## 🌟 Features
 
-*✅ **Next.js** : The React framework for production. *✅ **TypeScript** : Type safety and better developer experience. *✅ **TailwindCSS** : Utility-first CSS framework for rapid styling. *✅ **ESLint & Prettier** : For clean, consistent code. *✅ **Jest & Playwright** : Testing tools for quality assurance. *✅ **GitHub Actions** : Pre-configured workflows for building, testing, and deploying.
+- ✅ **Next.js** : The React framework for production.
+- ✅ **TypeScript** : Type safety and better developer experience.
+- ✅ **TailwindCSS** : Utility-first CSS framework for rapid styling.
+- ✅ **ESLint & Prettier** : For clean, consistent code.
+- ✅ **Jest & Playwright** : Testing tools for quality assurance.
+- ✅ **GitHub Actions** : Pre-configured workflows for building, testing, and deploying.
 
 ## 🚀 Live Demo
 
@@ -181,6 +186,39 @@ Have questions, feedback, or feature requests? Join the discussions here:
 - [Contribute](https://github.com/pradeepngupta/nextjs-typescript-tailwindcss): Collaborate to make this template even better.
 
 Let’s build something amazing together! 🚀
+
+---
+
+## 🚀 Roadmap
+
+### Current Planned Features
+
+- Example pages: Landing Page, Dashboard, Error Page, Blog Page.
+- Template for `create-next-app` CLI.
+- Organized config files in a `config/` folder.
+- UI themes: dark, light, system.
+- Performance tools: Web Vitals and Lighthouse CI.
+- SEO optimization using `next-seo`.
+
+### Proposed Features
+
+- Authentication with NextAuth.js.
+- PWA features (offline support, service workers).
+- Prebuilt Tailwind components for faster UI development.
+
+### Community Wishlist
+
+Help shape the future of **TSWindRush**! Suggest features or vote on existing ones by opening an issue on [GitHub](https://github.com/pradeepngupta/tswindrush/issues).
+
+Some ideas already proposed:
+
+- Accessibility improvements (a11y).
+- Internationalization (i18n) support.
+- GraphQL integration with Apollo Client.
+- Mock API integration.
+- Dockerize the application for containerized deployment.
+
+---
 
 ## Code of Conduct 🤝
 
