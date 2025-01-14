@@ -1,17 +1,23 @@
-# Next.js + TypeScript + Tailwind CSS Starter Template
+# TSWindrush Starter Template
 
-🚀 A blazing-fast, developer-friendly boilerplate combining Next.js, TypeScript, and TailwindCSS for modern web development.
+_"Kickstart your modern web development journey effortlessly!"_
+
+![TSWindRush Stack](./assets/ts-windrush.svg)
+
+![Next.js](https://img.shields.io/badge/Next.js-v13.0-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-v4.0-blue) ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v3.0-green)
+
+🚀 TSWindRush is a blazing-fast, developer-friendly starter template combining Next.js, TypeScript, and TailwindCSS for modern web development.
 
 Next JS is the Powerful React Framework for building Web Applications. Together with TypeScript, it provides a great developer experience and a scalable architecture. And with Tailwind CSS, you can create beautiful and responsive web applications.
 
 ![Tech Stack](./assets/tech-stack.png)
 
-## Table of Contents
+## 📚 Table of Contents
 
-- [Next.js + TypeScript + Tailwind CSS Starter Template](#nextjs--typescript--tailwind-css-starter-template)
-  - [Table of Contents](#table-of-contents)
+- [TSWindrush Starter Template](#tswindrush-starter-template)
+  - [📚 Table of Contents](#-table-of-contents)
   - [🎯 Why This Template?](#-why-this-template)
-  - [Prerequisites](#prerequisites)
+  - [✔️ Prerequisites](#️-prerequisites)
   - [🌟 Features](#-features)
   - [🚀 Live Demo](#-live-demo)
   - [🛠️ Setup \& Installation](#️-setup--installation)
@@ -37,7 +43,7 @@ Whether you're building a personal project, SaaS platform, or landing page, this
 
 Read more [here](./docs/TechStack.md) on Why I choose the above Tech Stack
 
-## Prerequisites
+## ✔️ Prerequisites
 
 Before you start using Next JS, make sure you have the following prerequisites:
 
@@ -119,11 +125,12 @@ For detailed information about various integrations and configurations, refer to
    ```
 5. Create a pull request.
 
-Learn more [here](./docs/Contributing.md)
+Check out [more](./docs/CONTRIBUTING.md) for guidelines.
 
 ## 🌟 Support
 
-If you find this template useful, please consider giving it a **⭐ star** on GitHub! It motivates me to improve this project further.
+⭐ If you find this template helpful, please give it a star to show your support!  
+💬 Have feedback or ideas? Open an issue or create a pull request!
 
 ---
 
@@ -136,4 +143,4 @@ Let’s build something amazing together! 🚀
 
 ## 📄 License
 
-This project is licensed under the [MIT License](./License.md). You’re free to use, modify, and distribute this template under the terms of the license.
+This project is licensed under the [MIT License](./LICENSE).
