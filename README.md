@@ -1,8 +1,15 @@
+![TSWindRush Stack](./assets/ts-windrush.svg)
+
 # TSWindrush Starter Template
 
 _"Kickstart your modern web development journey effortlessly!"_
 
-![TSWindRush Stack](./assets/ts-windrush.svg)
+![Tech Stack](./assets/tech-stack.png)
+
+> **High-performance Next.js Starter Template**  
+> Accelerate your projects with the power of **TypeScript**, **Tailwind CSS**, and **Next.js** in one seamless setup.
+
+---
 
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=nextjs&label=Next.js) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=reactjs&label=React.js) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=typescript&label=TypeScript) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=tailwindCSS&label=TailwindCSS)
 
@@ -16,22 +23,25 @@ _"Kickstart your modern web development journey effortlessly!"_
 
 Next JS is the Powerful React Framework for building Web Applications. Together with TypeScript, it provides a great developer experience and a scalable architecture. And with Tailwind CSS, you can create beautiful and responsive web applications.
 
-![Tech Stack](./assets/tech-stack.png)
-
 ## 📚 Table of Contents
 
 - [TSWindrush Starter Template](#tswindrush-starter-template)
   - [📚 Table of Contents](#-table-of-contents)
   - [🎯 Why This Template?](#-why-this-template)
+  - [Why Choose TSWindRush?](#why-choose-tswindrush)
   - [✔️ Prerequisites](#️-prerequisites)
   - [🌟 Features](#-features)
   - [🚀 Live Demo](#-live-demo)
   - [🛠️ Setup \& Installation](#️-setup--installation)
   - [⚡ Usage](#-usage)
+  - [⚡Usage Scenarios](#usage-scenarios)
   - [🔗 Additional Documentation](#-additional-documentation)
   - [🛠️ Contribution](#️-contribution)
   - [🌟 Support](#-support)
+  - [Contributors 🌟](#contributors-)
+  - [Join the Conversation 💬](#join-the-conversation-)
   - [🔗 Connect](#-connect)
+  - [Code of Conduct 🤝](#code-of-conduct-)
   - [📄 License](#-license)
 
 ## 🎯 Why This Template?
@@ -49,6 +59,12 @@ Whether you're building a personal project, SaaS platform, or landing page, this
 
 Read more [here](./docs/TechStack.md) on Why I choose the above Tech Stack
 
+## Why Choose TSWindRush?
+
+- 🚀 **Blazing Fast Builds**: Optimized Next.js configuration for speedy development.
+- 🎨 **Effortless Styling**: Tailwind CSS setup for consistent, scalable design.
+- 🛡️ **Reliable Codebase**: TypeScript ensures type safety for production-ready code.
+
 ## ✔️ Prerequisites
 
 Before you start using Next JS, make sure you have the following prerequisites:
@@ -61,7 +77,7 @@ Before you start using Next JS, make sure you have the following prerequisites:
 
 ## 🌟 Features
 
-✅ **Next.js** : The React framework for production. ✅ **TypeScript** : Type safety and better developer experience. ✅ **TailwindCSS** : Utility-first CSS framework for rapid styling. ✅ **ESLint & Prettier** : For clean, consistent code. ✅ **Jest & Playwright** : Testing tools for quality assurance. ✅ **GitHub Actions** : Pre-configured workflows for building, testing, and deploying.
+*✅ **Next.js** : The React framework for production. *✅ **TypeScript** : Type safety and better developer experience. *✅ **TailwindCSS** : Utility-first CSS framework for rapid styling. *✅ **ESLint & Prettier** : For clean, consistent code. *✅ **Jest & Playwright** : Testing tools for quality assurance. *✅ **GitHub Actions** : Pre-configured workflows for building, testing, and deploying.
 
 ## 🚀 Live Demo
 
@@ -106,6 +122,12 @@ npm test
 npm run test:e2e
 ```
 
+## ⚡Usage Scenarios
+
+- Kickstarting modern web applications with a pre-configured setup.
+- Prototyping UI / UX designs with Tailwind CSS & TypeScript
+- Learning or teaching Next.js, TypeScript, and Tailwind CSS in combinations.
+
 ## 🔗 Additional Documentation
 
 For detailed information about various integrations and configurations, refer to the[ Integration &amp; Configuration Guide.](./docs/INTEGRATION.md)
@@ -133,10 +155,25 @@ Check out [more](./docs/CONTRIBUTING.md) for guidelines.
 
 ## 🌟 Support
 
-⭐ If you find this template helpful, please give it a star to show your support!  
-💬 Have feedback or ideas? Open an issue or create a pull request!
+If you find this project useful:
+
+- 🌟 Star the repository to show your support.
+- 📢 Share it with others to spread the word.
+- 💬 Have feedback or ideas? Open an issue or create a pull request!
 
 ---
+
+## Contributors 🌟
+
+Thanks to these amazing people for their contributions:  
+<a href="https://github.com/pradeepngupta/tswindrush/graphs/contributors"> <img src="https://contrib.rocks/image?repo=pradeepngupta/tswindrush" /> </a>
+
+---
+
+## Join the Conversation 💬
+
+Have questions, feedback, or feature requests? Join the discussions here:  
+👉 [GitHub Discussions](https://github.com/pradeepngupta/tswindrush/discussions)
 
 ## 🔗 Connect
 
@@ -144,6 +181,10 @@ Check out [more](./docs/CONTRIBUTING.md) for guidelines.
 - [Contribute](https://github.com/pradeepngupta/nextjs-typescript-tailwindcss): Collaborate to make this template even better.
 
 Let’s build something amazing together! 🚀
+
+## Code of Conduct 🤝
+
+We value a welcoming and inclusive community. Please read our [Code of Conduct](./CODE_OF_CONDUCT.md).
 
 ## 📄 License
 
