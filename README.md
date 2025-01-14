@@ -4,7 +4,7 @@ _"Kickstart your modern web development journey effortlessly!"_
 
 ![TSWindRush Stack](./assets/ts-windrush.svg)
 
-![Next.js](https://img.shields.io/badge/Next.js-v15.1.4-blue) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=typescript&label=TypeScript) ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v3.4.17-green)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=nextjs&label=Next.js) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=reactjs&label=React.js) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=typescript&label=TypeScript) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=tailwindCSS&label=Tailwind CSS)
 
 ---
 
