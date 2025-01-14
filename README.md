@@ -6,6 +6,12 @@ _"Kickstart your modern web development journey effortlessly!"_
 
 ![Next.js](https://img.shields.io/badge/Next.js-v15.1.4-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-v5.7.3-blue) ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v3.4.17-green)
 
+---
+
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/pradeepngupta/tswindrush/ci.yml) ![Website](https://img.shields.io/website?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2F) ![Codecov](https://img.shields.io/codecov/c/github/pradeepngupta/tswindrush) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/pradeepngupta/tswindrush) ![GitHub repo size](https://img.shields.io/github/repo-size/pradeepngupta/tswindrush)
+
+---
+
 🚀 TSWindRush is a blazing-fast, developer-friendly starter template combining Next.js, TypeScript, and TailwindCSS for modern web development.
 
 Next JS is the Powerful React Framework for building Web Applications. Together with TypeScript, it provides a great developer experience and a scalable architecture. And with Tailwind CSS, you can create beautiful and responsive web applications.
