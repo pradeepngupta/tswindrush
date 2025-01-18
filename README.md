@@ -110,7 +110,7 @@ Follow these steps to get started:
    ```
 2. Navigate to the project directory:
    ```bash
-   cd nextjs-typescript-tailwindcss
+   cd TSWindRush
    ```
 3. Install dependencies:
    ```bash
@@ -126,14 +126,23 @@ For the detailed instruction, you can refer [here](./docs/NextJS_Default.md).
 
 ## ⚡ Usage
 
-- **Customization** : Modify `tailwind.config.js` and `globals.css` to customize your styling.
-- **TypeScript** : Add or edit `.ts` and `.tsx` files for your components.
+- **Fork the Repo**: Fork the Github Repo
+- **Build**: `bash     npm install     npm run build     `
+- **Create Vercel Account**: Create your own Vercel Account, and deploy
+      ```bash
+      vercel login
+      vercel
+      ```
 - **Testing** : Run Jest and Playwright tests using:
 
-```bash
-npm test
-npm run test:e2e
-```
+      ```bash
+      npm test
+      npm run test:e2e
+      ```
+
+- **GITHUB Secrets**: Define the below secrets in your Github Repo Settings: <VERCEL_PROJECT_ID>, <VERCEL_ORG_ID>, <VERCEL_TOKEN>
+- **Customization** : Modify `tailwind.config.js` and `globals.css` to customize your styling.
+- **TypeScript** : Add or edit `.ts` and `.tsx` files for your components.
 
 ## ⚡Usage Scenarios
 
