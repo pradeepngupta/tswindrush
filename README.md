@@ -6,8 +6,7 @@ _"Kickstart your modern web development journey effortlessly!"_
 
 ![Tech Stack](./assets/tech-stack.png)
 
-> **High-performance Next.js Starter Template**  
-> Accelerate your projects with the power of **TypeScript**, **Tailwind CSS**, and **Next.js** in one seamless setup.
+> **High-performance Next.js Starter Template** Accelerate your projects with the power of **TypeScript**, **Tailwind CSS**, and **Next.js** in one seamless setup.
 
 ---
 
@@ -128,21 +127,25 @@ For the detailed instruction, you can refer [here](./docs/NextJS_Default.md).
 
 - **Fork the Repo**: Fork the Github Repo
 - **Build**: Build the project
--     ```bash
-      npm install
-      npm run build
-      ```
-- **Create Vercel Account**: Create your own Vercel Account, and deploy
--     ```bash
-      vercel login
-      vercel
-      ```
-- **Testing** : Run Jest and Playwright tests using:
 
-      ```bash
-      npm test
-      npm run test:e2e
-      ```
+  ```
+  npm install
+  npm run build
+  ```
+
+- **Create Vercel Account**: Create your own Vercel Account, and deploy
+
+  ```
+  vercel login
+  vercel
+  ```
+
+- **Testing** : Run Jest and Playwright tests using
+
+  ```
+  npm test
+  npm run test:e2e
+  ```
 
 - **GITHUB Secrets**: Define the below secrets in your Github Repo Settings: <VERCEL_PROJECT_ID>, <VERCEL_ORG_ID>, <VERCEL_TOKEN>
 - **Customization** : Modify `tailwind.config.js` and `globals.css` to customize your styling.
@@ -191,15 +194,13 @@ If you find this project useful:
 
 ## Contributors 🌟
 
-Thanks to these amazing people for their contributions:  
-<a href="https://github.com/pradeepngupta/tswindrush/graphs/contributors"> <img src="https://contrib.rocks/image?repo=pradeepngupta/tswindrush" /> </a>
+Thanks to these amazing people for their contributions: `<a href="https://github.com/pradeepngupta/tswindrush/graphs/contributors">` `<img src="https://contrib.rocks/image?repo=pradeepngupta/tswindrush" />` `</a>`
 
 ---
 
 ## Join the Conversation 💬
 
-Have questions, feedback, or feature requests? Join the discussions here:  
-👉 [GitHub Discussions](https://github.com/pradeepngupta/tswindrush/discussions)
+Have questions, feedback, or feature requests? Join the discussions here: 👉 [GitHub Discussions](https://github.com/pradeepngupta/tswindrush/discussions)
 
 ## 🔗 Connect
 
