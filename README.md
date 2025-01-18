@@ -127,9 +127,13 @@ For the detailed instruction, you can refer [here](./docs/NextJS_Default.md).
 ## ⚡ Usage
 
 - **Fork the Repo**: Fork the Github Repo
-- **Build**: `bash     npm install     npm run build     `
+- **Build**: Build the project
+-     ```bash
+      npm install
+      npm run build
+      ```
 - **Create Vercel Account**: Create your own Vercel Account, and deploy
-      ```bash
+-     ```bash
       vercel login
       vercel
       ```
