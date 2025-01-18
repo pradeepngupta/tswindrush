@@ -24,7 +24,7 @@ const config: Config = {
 		],
 	},
 	collectCoverage: true,
-	collectCoverageFrom: ['./src/app/pages/**'],
+	collectCoverageFrom: ['./src/app/**'],
 	coverageThreshold: {
 		global: {
 			branches: 30,
