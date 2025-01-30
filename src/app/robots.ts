@@ -1,8 +1,8 @@
-import type { MetadataRoute } from 'next';
+import type { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-	const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-	const siteMapUrl = baseUrl + '/sitemap.xml';
+	const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
+	const siteMapUrl = baseUrl + '/sitemap.xml'
 	return {
 		rules: {
 			userAgent: '*',
@@ -10,5 +10,5 @@ export default function robots(): MetadataRoute.Robots {
 			disallow: ['/api/', '/private/'],
 		},
 		sitemap: siteMapUrl,
-	};
+	}
 }
