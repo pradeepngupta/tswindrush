@@ -4,6 +4,9 @@ import { ContactForm } from '@/app/components/contact-form'
 import { Button } from '@/app/components/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
+import { metadata } from './metadata'
+
+export { metadata }
 
 export default function Home() {
 	return (
