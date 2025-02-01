@@ -1,34 +1,28 @@
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
-import './globals.css';
+'use client'
 
-const geistSans = Geist({
-	variable: '--font-geist-sans',
-	subsets: ['latin'],
-});
+import { ThemeProvider } from 'next-themes'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import type React from 'react'
 
-const geistMono = Geist_Mono({
-	variable: '--font-geist-mono',
-	subsets: ['latin'],
-});
-
-export const metadata: Metadata = {
-	title: 'TSWindRush',
-	description: 'TSWindRush - A Starter Template with NextJs, Typescript & TailwindCSS',
-	manifest: './manifest.json',
-	keywords: 'TSWindRush, Next.js, TailwindCSS, Typscript, Starter Template',
-};
+const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({
 	children,
-}: Readonly<{
-	children: React.ReactNode;
-}>) {
+}: {
+	children: React.ReactNode
+}) {
 	return (
-		<html lang="en">
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-				{children}
+		<html lang="en" suppressHydrationWarning>
+			<body
+				className={`${inter.className} flex justify-center min-h-screen bg-background`}
+			>
+				<div className="w-full max-w-7xl">
+					<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+						{children}
+					</ThemeProvider>
+				</div>
 			</body>
 		</html>
-	);
+	)
 }
