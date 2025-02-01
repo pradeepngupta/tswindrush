@@ -15,7 +15,7 @@ export default function Home() {
 
 			<main className="flex-1">
 				{/* Hero Section */}
-				<section className="container flex flex-col-reverse items-center gap-8 pb-8 pt-6 md:flex-row md:gap-16 md:py-16">
+				<section className="flex flex-col-reverse items-center gap-8 pb-8 pt-6 md:flex-row md:gap-16 md:py-16">
 					<div className="flex flex-col items-start gap-4 md:w-1/2">
 						<h1 className="text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:text-6xl lg:leading-[1.1]">
 							Build Modern Web Apps Faster
@@ -43,19 +43,21 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="md:w-1/2">
-						<Image
-							src="/placeholder.svg?height=400&width=400"
-							alt="Hero Image"
-							width={400}
-							height={400}
-							priority
-							className="rounded-lg"
-						/>
+						<div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+							<Image
+								src="/tech-stack.png?height=600&width=600"
+								alt="Hero Image"
+								width={400}
+								height={400}
+								priority
+								className="w-auto h-auto"
+							/>
+						</div>
 					</div>
 				</section>
 
 				{/* Features Section */}
-				<section className="container py-16">
+				<section className="py-16">
 					<h2 className="mb-8 text-3xl font-bold tracking-tight">
 						Key Features
 					</h2>
@@ -103,7 +105,7 @@ const features = [
 	{
 		title: 'Modern Stack',
 		description:
-			'Next.js 13+ with App Router, Tailwind CSS, and modern tooling.',
+			'Next.js 15+ with App Router, Tailwind CSS, and modern tooling.',
 	},
 	{
 		title: 'Performance Focused',

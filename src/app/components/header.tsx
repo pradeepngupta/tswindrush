@@ -3,20 +3,39 @@
 import { Button } from '@/app/components/ui/button'
 import { ThemeToggle } from '@/app/components/theme-toggle'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Image from 'next/image'
 
 export function SiteHeader() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	const [isScrolled, setIsScrolled] = useState(false)
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setIsScrolled(window.scrollY > 10)
+		}
+
+		window.addEventListener('scroll', handleScroll)
+		return () => window.removeEventListener('scroll', handleScroll)
+	}, [])
 
 	return (
-		<header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+		<header
+			className={`sticky top-0 z-50 w-full transition-colors duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60' : 'bg-transparent'}`}
+		>
 			<div className="container flex h-16 items-center justify-between">
 				<div className="flex items-center space-x-4">
 					<Link href="/" className="flex items-center space-x-2">
-						<span className="font-bold">TSWinDRush</span>
+						<Image
+							src="/logo.png"
+							alt="TSWinDRush"
+							width={32}
+							height={32}
+							className="w-8 h-8"
+						/>
 					</Link>
 				</div>
-
+				<div className="flex-1"></div>
 				<div className="flex items-center space-x-4">
 					{/* Desktop Navigation */}
 					<nav className="hidden md:flex md:space-x-4">
@@ -66,7 +85,7 @@ export function SiteHeader() {
 
 				{/* Mobile Navigation */}
 				{isMenuOpen && (
-					<div className="fixed inset-0 top-16 z-50 bg-background md:hidden">
+					<div className="fixed inset-0 top-16 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 md:hidden">
 						<nav className="container grid gap-6 p-6">
 							<Link
 								href="/about"

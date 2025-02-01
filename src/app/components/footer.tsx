@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 export function SiteFooter() {
 	return (
-		<footer className="border-t bg-background">
-			<div className="container flex flex-col gap-8 py-8 md:py-12">
+		<footer className="border-t bg-background w-full">
+			<div className="flex flex-col gap-8 py-8 md:py-12">
 				<div className="flex flex-col gap-6 md:flex-row md:justify-between">
 					<div className="space-y-4">
 						<h3 className="text-lg font-medium">TSWinDRush</h3>
