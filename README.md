@@ -1,22 +1,36 @@
-![TSWindRush Stack](./assets/ts-windrush.svg)
-
 # TSWindrush Starter Template
 
-_"Kickstart your modern web development journey effortlessly!"_
+<div align="center">
+   <img src="./assets/ts-windrush.svg" alt="TSWindRush Stack" width="200">
+   <h1 align="center">TSWindrush Starter Template</h1> 
+   <h2 align="center"><u>Kickstart your modern web development journey effortlessly!</u>></h2> 
+</div>
 
-![Tech Stack](./assets/tech-stack.png)
+<div align="center">
+  <img src="./assets/tech-stack.png" alt="TSWindRush Tech Stack" width="600">
+</div>
 
 > **High-performance Next.js Starter Template** Accelerate your projects with the power of **TypeScript**, **Tailwind CSS**, and **Next.js** in one seamless setup.
 
 ---
 
-![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=nextjs&label=Next.js) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=reactjs&label=React.js) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=typescript&label=TypeScript) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2Fapi%2Fversion&query=tailwindCSS&label=TailwindCSS)
+<div align="center">
+  <a href="https://www.npmjs.com/package/next"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush.vercel.app%2Fapi%2Fversion&query=nextjs&label=Next.js" alt="Next.js"></a>
+  <a href="https://www.npmjs.com/package/react"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush.vercel.app%2Fapi%2Fversion&query=reactjs&label=React.js" alt="React.Js"></a>
+  <a href="https://www.npmjs.com/package/typescript"><img alt="TypeScript" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush.vercel.app%2Fapi%2Fversion&query=typescript&label=TypeScript"></a>
+   <a href="https://www.npmjs.com/package/tailwindcss"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush.vercel.app%2Fapi%2Fversion&query=tailwindCSS&label=TailwindCSS" alt="Tailwind CSS"></a>
+  </div>
+ 
+ ---
+ 
+ <div align="center">
+   <a href="https://tsw-ind-rush.vercel.app/"><img src="https://img.shields.io/website?url=https%3A%2F%2Ftsw-ind-rush.vercel.app%2F" alt="Website"></a>
+   <a href="https://github.com/pradeepngupta/tswindrush/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/pradeepngupta/tswindrush/ci.yml" alt="GitHub Actions Workflow Status"></a>
+   <a href="https://app.codecov.io/github/pradeepngupta/tswindrush"><img src="https://img.shields.io/codecov/c/github/pradeepngupta/tswindrush" alt="Codecov"></a>
+   <a href="https://github.com/pradeepngupta/tswindrush"><img src="https://img.shields.io/github/languages/code-size/pradeepngupta/tswindrush" alt="Github Code Size"></a>
+    <a href="https://github.com/pradeepngupta/tswindrush"><img src="https://img.shields.io/github/repo-size/pradeepngupta/tswindrush" alt="Github Repo Size"></a>
 
----
-
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/pradeepngupta/tswindrush/ci.yml) ![Website](https://img.shields.io/website?url=https%3A%2F%2Ftsw-ind-rush-pradeepnguptas-projects.vercel.app%2F) ![Codecov](https://img.shields.io/codecov/c/github/pradeepngupta/tswindrush) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/pradeepngupta/tswindrush) ![GitHub repo size](https://img.shields.io/github/repo-size/pradeepngupta/tswindrush)
-
----
+</div>
 
 🚀 TSWindRush is a blazing-fast, developer-friendly starter template combining Next.js, TypeScript, and TailwindCSS for modern web development.
 
