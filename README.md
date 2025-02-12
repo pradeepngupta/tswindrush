@@ -3,7 +3,7 @@
 <div align="center">
    <img src="./assets/ts-windrush.svg" alt="TSWindRush Stack" width="200">
    <h1 align="center">TSWindrush Starter Template</h1> 
-   <h2 align="center"><u>Kickstart your modern web development journey effortlessly!</u>></h2> 
+   <h3 align="center"><em>"Kickstart your modern web development journey effortlessly!"</em></h3> 
 </div>
 
 <div align="center">
@@ -29,7 +29,6 @@
    <a href="https://app.codecov.io/github/pradeepngupta/tswindrush"><img src="https://img.shields.io/codecov/c/github/pradeepngupta/tswindrush" alt="Codecov"></a>
    <a href="https://github.com/pradeepngupta/tswindrush"><img src="https://img.shields.io/github/languages/code-size/pradeepngupta/tswindrush" alt="Github Code Size"></a>
     <a href="https://github.com/pradeepngupta/tswindrush"><img src="https://img.shields.io/github/repo-size/pradeepngupta/tswindrush" alt="Github Repo Size"></a>
-
 </div>
 
 🚀 TSWindRush is a blazing-fast, developer-friendly starter template combining Next.js, TypeScript, and TailwindCSS for modern web development.
