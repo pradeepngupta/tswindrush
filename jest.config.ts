@@ -24,7 +24,11 @@ const config: Config = {
 		],
 	},
 	collectCoverage: true,
-	collectCoverageFrom: ['./src/app/**'],
+	collectCoverageFrom: ['<rootDir>/src/app/**'],
+	coveragePathIgnorePatterns: [
+		'<rootDir>/src/app/layout.tsx',
+		'<rootDir>/src/node_modules/',
+	],
 	coverageThreshold: {
 		global: {
 			branches: 0,
@@ -34,6 +38,9 @@ const config: Config = {
 		},
 	},
 	testMatch: ['**/__tests__/**/*.ts?(x)'],
+	moduleNameMapper: {
+		'^@/(.*)$': '<rootDir>/src/$1',
+	},
 };
 
 export default createJestConfig(config);
