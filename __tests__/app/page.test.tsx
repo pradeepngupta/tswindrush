@@ -5,8 +5,8 @@ describe('HomePage', () => {
 	it('shows NextJs Logo', () => {
 		render(<Home />);
 		// render(<Home/>);
-		const logo = screen.getByAltText('Next.js logo');
+		const logo = screen.getByAltText('TSWindRush logo');
 		expect(logo).toBeInTheDocument();
-		expect(logo).toHaveAttribute('src', '/next.svg');
+		expect(logo).toHaveAttribute('src', '/ts-windrush.svg');
 	});
 });
