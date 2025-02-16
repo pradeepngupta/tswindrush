@@ -107,17 +107,6 @@ jobs:
       - name: Install Playwright and Browsers
         run: npx playwright install --with-deps
 
-      - name: Build Application
-        run: npm run build
-
-      - name: Cache Build Output
-        uses: actions/cache@v4
-        with:
-          path: |
-            .next/cache
-            node_modules
-          key: build-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
-
       - name: Run Playwright Tests
         run: npx playwright test
 
