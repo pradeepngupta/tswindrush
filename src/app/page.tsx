@@ -1,17 +1,24 @@
+'use client';
+
 import Image from 'next/image';
+import { useTheme } from '@/app/components/theme-provider';
+import { TSWindRushLogoSVGComponent } from './components/tswindrush-logo-svg';
 
 export default function Home() {
+	const { theme } = useTheme();
+
 	return (
 		<div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
 			<main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-				<Image
-					className="text-center"
+				{/* <Image
+					className={`text-center dark`}
 					src="/ts-windrush.svg"
 					alt="TSWindRush logo"
 					width={180}
 					height={38}
 					priority
-				/>
+				/> */}
+				<TSWindRushLogoSVGComponent theme={theme} />
 				<p className="text-sm sm:text-left font-[family-name:var(--font-geist-mono)]">
 					Create your awesome landing page with TS-Wind-Rush
 				</p>
@@ -34,7 +41,7 @@ export default function Home() {
 						rel="noopener noreferrer"
 					>
 						<Image
-							className="dark:invert"
+							className="theme-invert"
 							src="/vercel.svg"
 							alt="Vercel logomark"
 							width={20}
@@ -60,6 +67,7 @@ export default function Home() {
 					rel="noopener noreferrer"
 				>
 					<Image
+						className="theme-invert"
 						aria-hidden
 						src="/github-mark.svg"
 						alt="Globe icon"
@@ -74,7 +82,14 @@ export default function Home() {
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<Image aria-hidden src="/file.svg" alt="File icon" width={16} height={16} />
+					<Image
+						className="theme-invert"
+						aria-hidden
+						src="/file.svg"
+						alt="File icon"
+						width={16}
+						height={16}
+					/>
 					Learn
 				</a>
 				<a
@@ -83,7 +98,14 @@ export default function Home() {
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<Image aria-hidden src="/window.svg" alt="Window icon" width={16} height={16} />
+					<Image
+						className="theme-invert"
+						aria-hidden
+						src="/window.svg"
+						alt="Window icon"
+						width={16}
+						height={16}
+					/>
 					Examples
 				</a>
 				<a
@@ -92,7 +114,14 @@ export default function Home() {
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<Image aria-hidden src="/globe.svg" alt="Globe icon" width={16} height={16} />
+					<Image
+						className="theme-invert"
+						aria-hidden
+						src="/globe.svg"
+						alt="Globe icon"
+						width={16}
+						height={16}
+					/>
 					Go to nextjs.org →
 				</a>
 			</footer>

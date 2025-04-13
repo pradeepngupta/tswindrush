@@ -1,12 +1,34 @@
 <svg baseProfile="full" height="200px" version="1.1" width="200px" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">
   <style>
-    .customd-theme .outer { fill: blue; stroke: silver; }
-    .customd-theme .inner { fill: silver; stroke: blue; }
-    .customd-theme .triangle { fill: blue; }
-    .customd-theme .text { fill: gray; letter-spacing: 1px; }
+      /* Default Theme (Dark) */
+    .outer { fill: blue; stroke: silver; }
+    .inner { fill: silve; stroke: blue; }
+    .triangle { fill: blue; }
+    .text { fill: gray; letter-spacing: 1px; }
+
+    .light .outer { fill: white; stroke: blue; }
+    .light .inner { fill: blue; stroke: blue; }
+    .light .triangle { fill: white; }
+    .light .text { fill: blue; letter-spacing: 1px; }
+	
+	  .dark .outer { fill: blue; stroke: silver; }
+    .dark .inner { fill: silver; stroke: blue; }
+    .dark .triangle { fill: blue; }
+    .dark .text { fill: gray; letter-spacing: 1px; }
+    
+    .monochrome-dark .outer { fill: black; stroke: silver; }
+    .monochrome-dark .inner { fill: silver; stroke: black; }
+    .monochrome-dark .triangle { fill: black; }
+    .monochrome-dark .text { fill: gray; letter-spacing: 1px; }
+
+    .monochrome-light .outer { fill: white; stroke: black; }
+    .monochrome-light .inner { fill: black; stroke: white; }
+    .monochrome-light .triangle { fill: white; }
+    .monochrome-light .text { fill: black; letter-spacing: 1px; }
+	  
   </style>
 <!--Custom Dark Theme-->
-  <g class="customd-theme">
+  <g>
     <circle class="outer" cx="100" cy="100" r="70" stroke-width="3"/>
     <circle class="inner" cx="100" cy="100" r="40" stroke-width="2"/>
     <path class="triangle" d="M 100 30 L 110 80 L 100 100 L 90 80 Z"/>

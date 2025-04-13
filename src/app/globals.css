@@ -28,10 +28,54 @@
 	--foreground: #171717;
 }
 
+.light {
+	--background: #ffffff;
+	--foreground: #171717;
+}
+
+.dark {
+	--background: #0a0a0a;
+	--foreground: #ededed;
+}
+
+.monochrome-light {
+	--background: #ffffff;
+	--foreground: #000000;
+	filter: grayscale(100%);
+}
+
+.monochrome-dark {
+	--background: #0a0a0a;
+	--foreground: #ffffff;
+	filter: grayscale(100%) invert(0);
+}
+
 @media (prefers-color-scheme: dark) {
 	:root {
 		--background: #0a0a0a;
 		--foreground: #ededed;
+	}
+
+	.light {
+		--background: #ffffff;
+		--foreground: #171717;
+	}
+
+	.dark {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
+
+	.monochrome-light {
+		--background: #ffffff;
+		--foreground: #000000;
+		filter: grayscale(100%);
+	}
+
+	.monochrome-dark {
+		--background: #0a0a0a;
+		--foreground: #ffffff;
+		filter: grayscale(100%) invert(0);
 	}
 }
 
@@ -39,4 +83,217 @@ body {
 	color: var(--foreground);
 	background: var(--background);
 	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Theme Switcher Icons */
+.icon-sun,
+.icon-moon,
+.icon-contrast,
+.icon-contrast-dark,
+.icon-system {
+	width: 20px;
+	height: 20px;
+	position: relative;
+	display: inline-block;
+}
+
+/* Sun Icon */
+.icon-sun {
+	background-color: currentColor;
+	border-radius: 50%;
+	width: 12px;
+	height: 12px;
+	margin: 4px;
+}
+
+.icon-sun::before {
+	content: '';
+	position: absolute;
+	top: -4px;
+	left: -4px;
+	right: -4px;
+	bottom: -4px;
+	border: 1px solid currentColor;
+	border-radius: 50%;
+}
+
+.icon-sun::after {
+	content: '';
+	position: absolute;
+	background-color: currentColor;
+	width: 2px;
+	height: 20px;
+	left: 9px;
+	top: 0;
+	box-shadow:
+		0 0 0 0 currentColor,
+		0 0 0 0 currentColor,
+		0 0 0 0 currentColor,
+		0 0 0 0 currentColor,
+		0 0 0 0 currentColor,
+		0 0 0 0 currentColor,
+		0 0 0 0 currentColor,
+		0 0 0 0 currentColor;
+	transform: rotate(0deg);
+}
+
+.icon-sun::after {
+	box-shadow:
+		0 9px 0 0 currentColor,
+		0 -9px 0 0 currentColor,
+		9px 0 0 0 currentColor,
+		-9px 0 0 0 currentColor,
+		6.36px 6.36px 0 0 currentColor,
+		-6.36px 6.36px 0 0 currentColor,
+		6.36px -6.36px 0 0 currentColor,
+		-6.36px -6.36px 0 0 currentColor;
+	width: 2px;
+	height: 2px;
+}
+
+/* Moon Icon */
+.icon-moon {
+	background-color: transparent;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+}
+
+.icon-moon::before {
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	border: 2px solid currentColor;
+	top: 2px;
+	left: 2px;
+}
+
+.icon-moon::after {
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: currentColor;
+	top: 2px;
+	left: 8px;
+}
+
+/* Contrast Icon */
+.icon-contrast {
+	border-radius: 50%;
+	border: 2px solid currentColor;
+	overflow: hidden;
+}
+
+.icon-contrast::before {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 20px;
+	background-color: currentColor;
+	left: 0;
+	top: 0;
+}
+
+/* Contrast Dark Icon */
+.icon-contrast-dark {
+	border-radius: 50%;
+	border: 2px solid currentColor;
+	overflow: hidden;
+}
+
+.icon-contrast-dark::before {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 20px;
+	background-color: currentColor;
+	right: 0;
+	top: 0;
+}
+
+/* System Icon */
+.icon-system {
+	border: 2px solid currentColor;
+	border-radius: 2px;
+}
+
+.icon-system::before {
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 10px;
+	border-bottom: 2px solid currentColor;
+	top: 2px;
+	left: 2px;
+}
+
+.icon-system::after {
+	content: '';
+	position: absolute;
+	width: 6px;
+	height: 2px;
+	background-color: currentColor;
+	bottom: 2px;
+	left: 7px;
+}
+
+/* Theme-specific image adjustments */
+.dark .theme-invert,
+.monochrome-dark .theme-invert {
+	filter: invert(1);
+}
+
+.monochrome-light .theme-invert,
+.monochrome-dark .theme-invert {
+	filter: grayscale(100%);
+}
+
+.monochrome-dark .theme-invert {
+	filter: grayscale(100%) invert(1);
+}
+
+/* Tooltip styles */
+.tooltip {
+	position: relative;
+	display: inline-block;
+}
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: auto;
+	min-width: 100px;
+	background-color: var(--foreground);
+	color: var(--background);
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 8px;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: opacity 0.3s;
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+.tooltip .tooltiptext::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: var(--foreground) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+	opacity: 0.9;
 }
