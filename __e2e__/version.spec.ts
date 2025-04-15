@@ -12,7 +12,7 @@ test('GET /api/version should return the current version', async ({ request }) =
 	expect(responseBody.reactjs).toBe('19.1.0');
 
 	expect(responseBody).toHaveProperty('tailwindCSS');
-	expect(responseBody.tailwindCSS).toBe('4.1.3');
+	expect(responseBody.tailwindCSS).toBe('4.1.4');
 
 	expect(responseBody).toHaveProperty('typescript');
 	expect(responseBody.typescript).toBe('5.8.3');
