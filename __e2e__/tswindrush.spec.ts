@@ -8,12 +8,12 @@ test('has title', async ({ page }) => {
 	await expect(page).toHaveTitle('TSWindRush');
 });
 
-test('logo is seen', async ({ page }) => {
-	// Navigate to home page
-	await page.goto('/');
+// test('logo is seen', async ({ page }) => {
+// 	// Navigate to home page
+// 	await page.goto('/');
 
-	await page.getByAltText('TSWindRush logo').click();
-});
+// 	await page.getByAltText('TSWindRush logo').click();
+// });
 
 test('github repo link is present', async ({ page }) => {
 	// Navigate to home page

@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
 	eslint: {
 		ignoreDuringBuilds: true,
 	},
-	allowedDevOrigins: ['http://127.0.0.0:3000'],
+	allowedDevOrigins: ['http://127.0.0.1:3000'],
 	images: { unoptimized: true },
 	async rewrites() {
 		return [
