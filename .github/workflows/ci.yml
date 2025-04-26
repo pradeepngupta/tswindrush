@@ -13,7 +13,7 @@ on:
       - '**.jsx'
       - '**.tsx'
       - '**.json'
-      - '**.yml'
+      - 'ci.yml'
       - 'public/**'
       - '__tests__/**'
       - '__e2e__/**'
