@@ -1,0 +1,54 @@
+# .github/workflows/update-minor-dependencies.yml
+name: Update Minor Dependencies
+
+on:
+  schedule:
+    - cron: '0 3 * * 1' # Every Monday at 3 AM UTC
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  update-minor-dependencies:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18' # Adjust if needed
+
+      - name: Install npm-check-updates
+        run: npm install -g npm-check-updates
+
+      - name: Update Minor Dependencies
+        run: |
+          ncu -t minor -u
+          npm install
+
+      - name: Check for Changes
+        id: git-check
+        run: |
+          git add package.json package-lock.json
+          git diff --cached --exit-code || echo "::set-output name=changes::true"
+
+      - name: Commit and Push Changes
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git checkout -b update-minor-dependencies
+          git commit -m "chore: update minor dependencies"
+          git push origin update-minor-dependencies
+
+      - name: Create Pull Request
+        if: steps.git-check.outputs.changes == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          title: 'chore: update minor dependencies'
+          body: 'Automated minor dependency updates.'
+          branch: update-minor-dependencies
+          base: main
+          labels: dependencies, automated-pr
+          draft: false # Optional: Set to true if you want to create a draft PR
