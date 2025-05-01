@@ -6,6 +6,14 @@ on:
     - cron: '0 3 * * 1' # Every Monday at 3 AM UTC
   workflow_dispatch: # Manual trigger
 
+permissions:
+  contents: write # Required to create a pull request
+
+env:
+  NODE_VERSION: 'file' # Adjust if needed
+  NCU_OPTIONS: '--target minor' # Options for npm-check-updates
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub token for authentication
+
 jobs:
   update-minor-dependencies:
     runs-on: ubuntu-latest
@@ -17,14 +25,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Adjust if needed
-
-      - name: Install npm-check-updates
-        run: npm install -g npm-check-updates
+          node-version: 'file' # Adjust if needed
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
 
       - name: Update Minor Dependencies
         run: |
-          ncu -t minor -u
+          npx npm-check-updates -t minor -u || exit 1
           npm install
 
       - name: Check for Changes
@@ -33,19 +40,17 @@ jobs:
           git add package.json package-lock.json
           git diff --cached --exit-code || echo "::set-output name=changes::true"
 
-      - name: Commit and Push Changes
+      - name: Delete Existing Branch
         if: steps.git-check.outputs.changes == 'true'
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git checkout -b update-minor-dependencies
-          git commit -m "chore: update minor dependencies"
-          git push origin update-minor-dependencies
-
+          git fetch origin
+          git branch -D update-minor-dependencies || true
+          git push origin --delete update-minor-dependencies || true
       - name: Create Pull Request
         if: steps.git-check.outputs.changes == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           title: 'chore: update minor dependencies'
           body: 'Automated minor dependency updates.'
           branch: update-minor-dependencies
