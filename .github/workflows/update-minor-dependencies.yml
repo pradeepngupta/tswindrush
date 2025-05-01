@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write # Required to create a pull request
+  pull-requests: write # Required to create a pull request
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub token for authentication
