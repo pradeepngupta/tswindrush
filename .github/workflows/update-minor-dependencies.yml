@@ -10,8 +10,6 @@ permissions:
   contents: write # Required to create a pull request
 
 env:
-  NODE_VERSION: 'file' # Adjust if needed
-  NCU_OPTIONS: '--target minor' # Options for npm-check-updates
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub token for authentication
 
 jobs:
