@@ -32,7 +32,7 @@
     "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@playwright/test": "1.53.1",
+    "@playwright/test": "1.53.2",
     "@swc/jest": "0.2.38",
     "@tailwindcss/postcss": "4.1.11",
     "@testing-library/dom": "10.4.0",
