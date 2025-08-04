@@ -26,7 +26,7 @@
     "test:e2e-debug": "npx playwright test --debug"
   },
   "dependencies": {
-    "next": "15.4.2",
+    "next": "15.4.5",
     "npm": "11.5.2",
     "react": "19.1.0",
     "react-dom": "19.1.0"
