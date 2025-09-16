@@ -58,7 +58,7 @@
     "prettier": "3.6.2",
     "tailwindcss": "4.1.13",
     "tailwindcss-animate": "1.0.7",
-    "ts-jest": "29.4.1",
+    "ts-jest": "29.4.2",
     "ts-node": "10.9.2",
     "typescript": "5.9.2"
   },
