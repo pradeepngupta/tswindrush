@@ -43,7 +43,7 @@
     "@types/lint-staged": "14.0.0",
     "@types/node": "24.7.2",
     "@types/react": "19.2.2",
-    "@typescript-eslint/eslint-plugin": "8.46.0",
+    "@typescript-eslint/eslint-plugin": "8.46.2",
     "@typescript-eslint/parser": "8.46.0",
     "autoprefixer": "10.4.21",
     "eslint": "9.37.0",
