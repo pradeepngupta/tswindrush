@@ -9,11 +9,11 @@ test('GET /api/version should return the current version', async ({ request }) =
 	expect(responseBody.nextjs).toBe('15.5.6');
 
 	expect(responseBody).toHaveProperty('reactjs');
-	expect(responseBody.reactjs).toBe('19.1.1');
+	expect(responseBody.reactjs).toBe('19.2.0');
 
 	expect(responseBody).toHaveProperty('tailwindCSS');
-	expect(responseBody.tailwindCSS).toBe('4.1.12');
+	expect(responseBody.tailwindCSS).toBe('4.1.16');
 
 	expect(responseBody).toHaveProperty('typescript');
-	expect(responseBody.typescript).toBe('5.9.2');
+	expect(responseBody.typescript).toBe('5.9.3');
 });
