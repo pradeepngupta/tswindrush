@@ -11,7 +11,7 @@
     "build": "next build",
     "start": "next start",
     "tsc": "npx tsc --noEmit",
-    "lint": "next lint --fix",
+    "lint": "eslint --fix .",
     "format": "prettier --check . --config ./.prettierrc",
     "format:fix": "prettier --write . --config ./.prettierrc",
     "prepare": "husky",
@@ -26,6 +26,7 @@
     "test:e2e-debug": "npx playwright test --debug"
   },
   "dependencies": {
+    "@next/eslint-plugin-next": "15.5.6",
     "next": "15.5.6",
     "npm": "11.6.2",
     "react": "19.2.0",
