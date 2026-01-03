@@ -1,37 +1,58 @@
-import { defineConfig, globalIgnores } from 'eslint/config';
-// import nextTypescript from "eslint-config-next/typescript.js";
-import tsParser from '@typescript-eslint/parser';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+// eslint.config.js
 import js from '@eslint/js';
-import { FlatCompat } from '@eslint/eslintrc';
+import tseslint from 'typescript-eslint';
+import nextPlugin from '@next/eslint-plugin-next';
+import prettierConfig from 'eslint-config-prettier';
+import prettierPlugin from 'eslint-plugin-prettier';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-	baseDirectory: __dirname,
-	recommendedConfig: js.configs.recommended,
-	allConfig: js.configs.all,
-});
-
-export default defineConfig([
-	globalIgnores(['**/node_modules/']),
+export default [
+	// Global ignores - must be first and separate
 	{
-		extends: [
-			...compat.extends('eslint:recommended'),
-			...compat.extends('next/core-web-vitals'),
-			...compat.extends('next/typescript'),
-			...compat.extends('plugin:@typescript-eslint/recommended'),
-			...compat.extends('plugin:prettier/recommended'),
+		ignores: [
+			'**/node_modules/**',
+			'**/.next/**',
+			'**/dist/**',
+			'**/build/**',
+			'**/coverage/**',
+			'**/.turbo/**',
+			'**/out/**',
 		],
-
-		languageOptions: {
-			parser: tsParser,
+	},
+	js.configs.recommended,
+	...tseslint.configs.recommended,
+	{
+		files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
+		plugins: {
+			'@next/next': nextPlugin,
+			prettier: prettierPlugin,
 		},
-
 		rules: {
+			...nextPlugin.configs.recommended.rules,
+			...nextPlugin.configs['core-web-vitals'].rules,
+			...prettierConfig.rules,
+			...prettierPlugin.configs.recommended.rules,
+			semi: 'error',
+			'prefer-const': 'error',
 			'@typescript-eslint/no-explicit-any': 'error',
 		},
-		ignores: ['**/dist/**', '**/.next/**', '/node_modules/**'],
+		languageOptions: {
+			parserOptions: {
+				ecmaVersion: 'latest',
+				sourceType: 'module',
+			},
+		},
 	},
-]);
+	// Node.js config files
+	{
+		files: ['**/*.config.{js,mjs,cjs}', '.lintstagedrc.js'],
+		languageOptions: {
+			globals: {
+				process: 'readonly',
+				module: 'readonly',
+				require: 'readonly',
+				__dirname: 'readonly',
+				__filename: 'readonly',
+			},
+		},
+	},
+];
