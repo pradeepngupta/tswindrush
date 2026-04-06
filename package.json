@@ -29,8 +29,8 @@
     "test:e2e-debug": "npx playwright test --debug"
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "16.2.1",
-    "next": "16.2.1",
+    "@next/eslint-plugin-next": "16.2.2",
+    "next": "16.2.2",
     "npm": "11.12.1",
     "react": "19.2.4",
     "react-dom": "19.2.4"
@@ -38,7 +38,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "3.3.5",
     "@eslint/js": "9.39.4",
-    "@playwright/test": "1.58.2",
+    "@playwright/test": "1.59.1",
     "@swc/jest": "0.2.39",
     "@tailwindcss/postcss": "4.2.2",
     "@testing-library/dom": "10.4.1",
@@ -46,13 +46,13 @@
     "@testing-library/react": "16.3.2",
     "@testing-library/user-event": "14.6.1",
     "@types/jest": "30.0.0",
-    "@types/node": "25.5.0",
+    "@types/node": "25.5.2",
     "@types/react": "19.2.14",
-    "@typescript-eslint/eslint-plugin": "8.57.2",
+    "@typescript-eslint/eslint-plugin": "8.58.0",
     "@typescript-eslint/parser": "8.58.0",
     "autoprefixer": "10.4.27",
     "eslint": "9.39.4",
-    "eslint-config-next": "16.2.1",
+    "eslint-config-next": "16.2.2",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.5",
     "husky": "9.1.7",
@@ -63,7 +63,7 @@
     "prettier": "3.8.1",
     "tailwindcss": "4.2.2",
     "tailwindcss-animate": "1.0.7",
-    "ts-jest": "29.4.6",
+    "ts-jest": "29.4.9",
     "ts-node": "10.9.2",
     "typescript": "5.9.3"
   },
