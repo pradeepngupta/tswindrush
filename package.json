@@ -67,6 +67,9 @@
     "ts-node": "10.9.2",
     "typescript": "5.9.3"
   },
+  "overrides": {
+    "picomatch": "4.0.4"
+  },
   "engines": {
     "node": ">=20"
   },
