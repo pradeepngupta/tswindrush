@@ -15,5 +15,5 @@ test('GET /api/version should return the current version', async ({ request }) =
 	expect(responseBody.tailwindCSS).toBe('4.2.2');
 
 	expect(responseBody).toHaveProperty('typescript');
-	expect(responseBody.typescript).toBe('6.0.2');
+	expect(responseBody.typescript).toBe('6.0.3');
 });
