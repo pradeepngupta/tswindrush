@@ -6,7 +6,7 @@ test('GET /api/version should return the current version', async ({ request }) =
 	const responseBody = await response.json();
 
 	expect(responseBody).toHaveProperty('nextjs');
-	expect(responseBody.nextjs).toBe('16.2.6');
+	expect(responseBody.nextjs).toBe('16.2.9');
 
 	expect(responseBody).toHaveProperty('reactjs');
 	expect(responseBody.reactjs).toBe('19.2.6');
