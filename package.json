@@ -31,7 +31,7 @@
   "dependencies": {
     "@next/eslint-plugin-next": "16.2.9",
     "next": "16.2.9",
-    "npm": "11.17.0",
+    "npm": "11.18.0",
     "react": "19.2.7",
     "react-dom": "19.2.7"
   },
