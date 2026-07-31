@@ -33,7 +33,7 @@
     "next": "16.2.12",
     "npm": "11.18.0",
     "react": "19.2.7",
-    "react-dom": "19.2.7"
+    "react-dom": "19.2.8"
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.3.6",
