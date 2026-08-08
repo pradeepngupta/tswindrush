@@ -1,0 +1,189 @@
+name: TSWindrush Dependency Policy
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  dependency-policy:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Debug
+        run: |
+          echo "Actor: ${{ github.actor }}"
+          echo "PR Author: ${{ github.event.pull_request.user.login }}"
+
+      - name: Exit if not Dependabot
+        if: github.event.pull_request.user.login != 'dependabot[bot]'
+        run: |
+          echo "Not a Dependabot PR"
+          exit 0
+
+      - name: Check existing policy labels
+        id: check-labels
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const labels = context.payload.pull_request.labels.map(l => l.name);
+
+            const decisionLabels = [
+              "review-required",
+              "review-if-needed",
+              "defer",
+              "security"
+            ];
+
+            const alreadyProcessed =
+              labels.some(label => decisionLabels.includes(label));
+
+            core.setOutput("processed", alreadyProcessed);
+
+      - name: Stop if policy already applied
+        if: steps.check-labels.outputs.processed == 'true'
+        run: |
+          echo "Dependency policy already applied."
+          exit 0
+
+      - name: Fetch Dependabot Metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: Add dependencies label
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: |
+            dependencies
+
+      - name: Label Major Update
+        if: steps.metadata.outputs.update-type == 'version-update:semver-major'
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: |
+            review-required
+
+      - name: Label Minor Update
+        if: steps.metadata.outputs.update-type == 'version-update:semver-minor'
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: |
+            review-if-needed
+
+      - name: Label Patch Update
+        if: steps.metadata.outputs.update-type == 'version-update:semver-patch'
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: |
+            defer
+
+      - name: Add TSWindrush Dependency Policy Comment
+        uses: actions/github-script@v9
+        env:
+          UPDATE_TYPE: ${{ steps.metadata.outputs.update-type }}
+          DEPENDENCY_NAMES: ${{ steps.metadata.outputs.dependency-names }}
+          PREVIOUS_VERSION: ${{ steps.metadata.outputs.previous-version }}
+          NEW_VERSION: ${{ steps.metadata.outputs.new-version }}
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+          script: |
+            const updateType = process.env.UPDATE_TYPE;
+            const dependencyNames = process.env.DEPENDENCY_NAMES;
+            const previousVersion = process.env.PREVIOUS_VERSION;
+            const newVersion = process.env.NEW_VERSION;
+
+            let recommendation = "Review";
+            let label = "";
+            let readableType = updateType;
+            let decisionReason = "";
+
+            switch (updateType) {
+
+              case "version-update:semver-major":
+                recommendation = "🔴 Review Required";
+                label = "review-required";
+                readableType = "Major Version Update";
+                decisionReason = `
+            - Major version upgrade.
+            - Review release notes for breaking changes.
+            - Verify compatibility with Content Creator OS before merging.
+            `;
+                break;
+
+              case "version-update:semver-minor":
+                recommendation = "🟡 Review If Needed";
+                label = "review-if-needed";
+                readableType = "Minor Version Update";
+                decisionReason = `
+            - Minor version upgrade.
+            - Review if it introduces a feature required by Content Creator OS.
+            - Otherwise, the upgrade may be deferred.
+            `;
+                break;
+
+              case "version-update:semver-patch":
+                recommendation = "🟢 Defer";
+                label = "defer";
+                readableType = "Patch Version Update";
+                decisionReason = `
+            - Patch version update.
+            - Defer unless it addresses an End-of-Life version, a High/Critical security issue, a required feature, or a dependency compatibility requirement.
+            `;
+                break;
+            }
+
+            const body = `## TSWindrush Dependency Review
+
+            ### Dependency
+
+            **Package:** ${dependencyNames}
+
+            **Current Version:** ${previousVersion}
+
+            **Target Version:** ${newVersion}
+
+            **Update Type:** ${readableType}
+
+            ---
+
+            ## Recommendation
+
+            **${recommendation}**
+
+            ### Decision Rationale
+
+            ${decisionReason}
+
+            ---
+
+            ### CCO Dependency Policy
+
+            | Rule | Status |
+            |------|--------|
+            | 1. End-of-Life | Manual Review |
+            | 2. Security Fix | Manual Review |
+            | 3. Required Feature | Manual Review |
+            | 4. Major Version | ${updateType === "version-update:semver-major" ? "Yes" : "No"} |
+            | 5. Dependency Requirement | Manual Review |
+
+            **Applied Label:** \`${label}\`
+
+            Please review this PR against the Content Creator OS Dependency Policy.
+
+            📄 Policy Document: \`docs/development/DEPENDENCY_POLICY.md\`
+            `;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
