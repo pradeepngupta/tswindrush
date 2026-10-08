@@ -20,9 +20,9 @@
   <a href="https://www.npmjs.com/package/typescript"><img alt="TypeScript" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush.vercel.app%2Fapi%2Fversion&query=typescript&label=TypeScript"></a>
    <a href="https://www.npmjs.com/package/tailwindcss"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ftsw-ind-rush.vercel.app%2Fapi%2Fversion&query=tailwindCSS&label=TailwindCSS" alt="Tailwind CSS"></a>
   </div>
- 
- ---
- 
+
+---
+
  <div align="center">
    <a href="https://tsw-ind-rush.vercel.app/"><img src="https://img.shields.io/website?url=https%3A%2F%2Ftsw-ind-rush.vercel.app%2F" alt="Website"></a>
    <a href="https://github.com/pradeepngupta/tswindrush/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/pradeepngupta/tswindrush/ci.yml" alt="GitHub Actions Workflow Status"></a>
@@ -132,7 +132,7 @@ Follow these steps to get started:
    ```bash
    npm run dev
    ```
-5. Open [http://localhost:3000]() in your browser to see the app.
+5. Open [http://localhost:3000](<>) in your browser to see the app.
 
 For the detailed instruction, you can refer [here](./docs/NextJS_Default.md).
 
