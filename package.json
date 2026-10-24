@@ -29,7 +29,7 @@
     "test:e2e-debug": "npx playwright test --debug"
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "16.4.0",
+    "@next/eslint-plugin-next": "16.4.2",
     "next": "16.4.0",
     "react": "19.3.0",
     "react-dom": "19.3.0"
